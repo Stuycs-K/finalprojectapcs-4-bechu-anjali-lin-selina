@@ -27,8 +27,10 @@ It would be a pretty standard checkers board. The pieces would be used in the fa
 - A regular piece can only move forward and once it reaches the other end, it can begin to move backwards
 
 
-1 statement of the problem you are solving and/or a high level description of the project. (CHANGE THIS!!!!!)
+### Battleship
+It would be a one player version. Both boards will be displayed on the screen. 
+- One is random and has the ships hidden from the player and the other has visible ships placed by the player.
+- Size of board and number and size of pieces still undecided.
 
-2 statement of the problem you are solving and/or a high level description of the project. (CHANGE THIS!!!!!)
-
-3 statement of the problem you are solving and/or a high level description of the project. (CHANGE THIS!!!!!)
+Alternates between the player attacking and a random spot on the player’s board being attacked.
+- Misses and hits, as well as any sunken ships, will be updated on the board.
