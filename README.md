@@ -11,4 +11,3 @@ It would be one level of candy crush with a goal of removing 30 blue candies giv
 # Intended usage:
 
 A description as to how the project will be used (describe the user interface). (CHANGE THIS!!!!!)
-  
