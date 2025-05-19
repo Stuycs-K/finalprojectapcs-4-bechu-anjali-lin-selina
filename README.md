@@ -2,7 +2,9 @@
 # Project Description
 
 PERIOD 4
+
 Selina Lin and Anjali Bechu
+
 Group Name (be creative and lean into it!)
 
 Brief Project description (1 paragraph summary)
