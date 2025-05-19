@@ -3,7 +3,7 @@
 
 PERIOD 4
 Selina Lin and Anjali Bechu
-Group Name (be creative and lean into it!)
+Bechuscotch and Lin-fe Savers
 
 Brief Project description (1 paragraph summary)
 It would be one level of candy crush with a goal of removing 30 blue candies given ____ moves. It would be a standard 9x9 board that is reandomized each time the program is run. There would be a scoreboard above with every 3 candies matched yielding _______ points. There will be special candies---striped and wrapped---acting as they would in the actual candy crush game.
