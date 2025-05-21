@@ -38,5 +38,9 @@ main - both
 
 A timeline with expected completion dates of parts of the project. (CHANGE THIS!!!!!)
 
-
-
+Day 1 - Candy done
+Day 2 - Tracker done
+Day 3 - Board mostly done, testing through day 4
+Day 5 - Drawing and updating board in main done
+Day 6 - Interactions through main done
+Day 7 on - testing
