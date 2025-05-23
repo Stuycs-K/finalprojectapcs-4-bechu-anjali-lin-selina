@@ -9,3 +9,6 @@ One class Period - Discussed project scope, planned classes and made rough sketc
 
 ### 2025-05-20/21 - UML Diagram, info in Prototyoe 
 Total of one hour through the evening - Made a diagram with class information in an online program. Uploaded to repo and put in PROTOTYPE.md. Updated technical details and pacing as well.
+
+### 2025-05-22/23 - Updated UML Diagram
+Updated UML diagram according to specifications in post. Started during class. Finished and uploaded to repo at home.
