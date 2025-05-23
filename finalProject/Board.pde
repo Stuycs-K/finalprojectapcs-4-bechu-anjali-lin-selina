@@ -20,7 +20,31 @@ class Board{
   boolean swappable(int x, int y){
     Candy select = board[y][x];
     
-    boolean swappable = false;
+    boolean swappable1 = false;
+    
+    if(x-1>=0 && x+1<board[0].length){
+      swappable1 = true;
+    }
+    
+    if(y-1>=0 && y+1<board.length){
+      swappable1 = true;
+    }
+    
+    if(x-2>=0){  
+    swappable1 = true;
+    } 
+    
+    if(x+2<board[0].length){
+      swappable1 = true;
+    }
+    
+    if(y-2>=0){
+    
+    } 
+    
+    if(y+2<board.length){
+      swappable1 = true;
+    }
     
   }
 
