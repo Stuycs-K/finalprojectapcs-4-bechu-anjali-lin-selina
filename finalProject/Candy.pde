@@ -3,23 +3,23 @@ class Candy {
   private int special;
   private int score;
   
-  public String getColor() {
+   String getColor() {
     return candyColor;
   }
   
-  public int getScore() {
+   int getScore() {
     return score;
   }
   
-  public int getSpecial() {
+   int getSpecial() {
     return special;
   }
   
-  public void setSpecial(int s) {
+   void setSpecial(int s) {
     special = s;
   }
   
-  public void setScore(int s) {
+   void setScore(int s) {
     score = s;
   }
   

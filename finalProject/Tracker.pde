@@ -3,18 +3,32 @@ class Tracker {
   private int score;
   private int goal;
   
-  public int getMoves() {
+  int getMoves() {
     return moves;
   }
   
-  public int getScore() {
+  int getScore() {
     return score;
   }
   
-  public int getGoal() {
+  int getGoal() {
     return goal;
   }
   
+  void decreaseMoves() {
+    
+  }
+  
+  /*
+  5 points for a match of 3
+  8 points for striped
+  10 points for wrapped
+  150 points for the bomb
   
   
+  */
+  
+  public void increaseScore(int s) {
+    
+  }
 }
