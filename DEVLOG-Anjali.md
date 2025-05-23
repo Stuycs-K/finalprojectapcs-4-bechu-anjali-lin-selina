@@ -8,4 +8,4 @@ This document must be updated daily every time you finish a work session.
 Discuss project plans and made a rough sketch of the uml diagram.
 
 ### 2025-05-23
-Finished the candy class (all the getter and setter methods) 
+Finished the candy class (all the getter and setter methods) and started the tracker class
