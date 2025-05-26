@@ -3,10 +3,10 @@ class Candy {
   private int special;
   private int score;
   
-  Candy(String color, int special, int score) {
-    candyColor = color;
-    special = special;
-    score = score;
+  Candy(String candyColor, int special, int score) {
+    this.candyColor = candyColor;
+    this.special = special;
+    this.score = score;
   }
   
    String getColor() {
