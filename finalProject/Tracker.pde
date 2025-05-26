@@ -26,11 +26,9 @@ class Tracker {
   8 points for striped
   10 points for wrapped
   150 points for the bomb
-  
-  
   */
   
   public void increaseScore(int s) {
-    
+    score += s;
   }
 }
