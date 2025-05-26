@@ -16,7 +16,9 @@ class Tracker {
   }
   
   void decreaseMoves() {
-    
+    if (moves > 0) {
+      moves--;
+    }
   }
   
   /*
