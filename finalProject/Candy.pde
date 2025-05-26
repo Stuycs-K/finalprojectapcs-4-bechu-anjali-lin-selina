@@ -3,6 +3,12 @@ class Candy {
   private int special;
   private int score;
   
+  Candy(String color, int special, int score) {
+    candyColor = color;
+    special = special;
+    score = score;
+  }
+  
    String getColor() {
     return candyColor;
   }
