@@ -16,7 +16,11 @@ class Candy {
    int getScore() {
     return score;
   }
-  
+  // -1 is regular
+  // 1 is striped (up)
+  // 2 is striped (across)
+  // 3 is wrapped
+  // 4 is bomb
    int getSpecial() {
     return special;
   }

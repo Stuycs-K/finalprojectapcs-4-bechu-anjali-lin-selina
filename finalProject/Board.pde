@@ -27,18 +27,32 @@ class Board{
     int spec = board[y][x].getSpecial();
     String colr = board[y][x].getColor();
     if(swappable(x,y,x,y)){
-      board[y][x] = null;
+      int total = 0;
       int leftRight = -1;
-      int upDown = 0;
+      int upDown = -1;
       while(leftRight+x > -1 && board[y][x+leftRight].getColor().equals(colr)){
-        remove(x+leftRight,y);
+        board[y][x+leftRight]=null;
         leftRight--;
+        total++;
       }
       leftRight = 1;
       while(leftRight+x<board[0].length && board[y][x+leftRight].getColor().equals(colr)){
-        remove(x+leftRight,y);
-        leftRight--;
+        board[y][x+leftRight]=null;
+        leftRight++;
+        total++;
       }
+      while(upDown+y > -1 && board[y+upDown][x].getColor().equals(colr)){
+        board[y+upDown][x]=null;
+        upDown--;
+        total++;
+      }
+      upDown = 1;
+      while(upDown+x<board.length && board[y+upDown][x].getColor().equals(colr)){
+        board[y+upDown][x]=null;
+        upDown++;
+        total++;
+      }
+      board[y][x] = null;
       return true;
     }
     return false;
