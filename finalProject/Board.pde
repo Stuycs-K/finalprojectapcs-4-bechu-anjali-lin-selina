@@ -31,33 +31,56 @@ class Board{
 
   boolean swappable(int x, int y){
     Candy select = board[y][x];
+    String thisColor = select.getColor();
     
     boolean swappable1 = false;
     
-    if(x-1>=0 && x+1<board[0].length){
-      swappable1 = true;
+    if(x-1>=0){
+      if(board[y][x-1].getColor().equals(thisColor)){
+        swappable1 = true;
+      }
     }
     
-    if(y-1>=0 && y+1<board.length){
-      swappable1 = true;
+    if(x+1<board[0].length){
+      if(board[y][x+1].getColor().equals(thisColor)){
+        swappable1 = true;
+      }
     }
+    
+    if(y-1>=0){
+      if(board[y-1][x].getColor().equals(thisColor)){
+        swappable1 = true;
+      }
+    }
+    
+    if(y+1<board.length){
+      if(board[y+1][x].getColor().equals(thisColor)){
+        swappable1 = true;
+      }
+    }
+    
+    if(!swappable1){
+      return false;
+    }
+    
+    boolean swappable2 = false;
     
     if(x-2>=0){  
-    swappable1 = true;
+    swappable2 = true;
     } 
     
     if(x+2<board[0].length){
-      swappable1 = true;
+      swappable2 = true;
     }
     
     if(y-2>=0){
-    
+      swappable2 = true;
     } 
     
     if(y+2<board.length){
-      swappable1 = true;
+      swappable2 = true;
     }
-    
+    return swappable2;
   }
 
 }
