@@ -26,7 +26,7 @@ class Board{
   boolean remove(int x, int y){
     int spec = board[y][x].getSpecial();
     String colr = board[y][x].getColor();
-    if(swappable(x,y,x,y)){
+    if(spec<4 && swappable(x,y,x,y)){
       int total = 0;
       int leftRight = -1;
       int upDown = -1;
@@ -52,9 +52,21 @@ class Board{
         upDown++;
         total++;
       }
-      board[y][x] = null;
+      if(total == 2){
+        board[y][x] = null;
+      }
+      if(total == 3){
+        board[y][x].setSpecial((int)(Math.random() * 2 + 1));
+      }
+      if(total == 4){
+        board[y][x].setSpecial(4);
+      }
+      if(total == 5){
+        board[y][x].setSpecial(3);
+      }
       return true;
     }
+    
     return false;
   }
   
