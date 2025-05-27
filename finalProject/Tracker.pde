@@ -28,14 +28,18 @@ class Tracker {
   150 points for the bomb
   */
   
-  public void increaseScore(int s) {
+  void increaseScore(int s) {
     score += s;
   }
   
   
-  public void progressGoal (int g) {
+  void progressGoal (int g) {
    while (goal>=0) {
      goal -= g;
    }
+  }
+  
+  boolean win() {
+    return goal == 0;
   }
 }
