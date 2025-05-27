@@ -1,5 +1,17 @@
 class Board{
-  Candy[][] board;
+  private Candy[][] board;
+  
+  Board(){
+    board = new Candy[9][9];
+    String[] colors = {"red", "orange", "yellow", "green", "blue", "purple"};
+    for(int i = 0; i < 9; i++){
+      for(int j = 0; j < 9; j++){
+        int colr = (int)(Math.random() * 6);
+        board[i][j]= new Candy(colors[colr], 0, 10);
+      }
+    }
+  }
+  
   
   boolean swap(int x1, int y1, int x2, int y2){
 
@@ -10,11 +22,11 @@ class Board{
   }
   
   boolean remove(int x, int y){
-  
+    board[y][x] = null;
   }
   
   void replace(){
-  
+    
   }
 
   boolean swappable(int x, int y){
