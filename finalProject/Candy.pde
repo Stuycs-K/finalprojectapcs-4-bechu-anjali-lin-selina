@@ -33,7 +33,26 @@ class Candy {
     score = s;
   }
   
+  
   void display() {
+    if (candyColor == "orange") {
+    size(400,400);
+    fill(255, 165, 0);
+    ellipse(0, 0, 100, 200);
+    }
+    
+   if (candyColor == "green") {
+    size(400,400);
+    fill(255, 165, 0);
+    square(0, 0, 200);
+    }
+    
+    if (candyColor == "blue") {
+    size(400,400);
+    fill(255, 165, 0);
+    ellipse(0, 0, 200, 200);
+    }
+    
   }
   
 }
