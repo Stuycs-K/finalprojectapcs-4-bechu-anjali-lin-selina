@@ -9,3 +9,9 @@ Discuss project plans and made a rough sketch of the uml diagram.
 
 ### 2025-05-23
 Finished the candy class (all the getter and setter methods) and started the tracker class
+
+### 2025-05-25
+Added the candy constructor
+
+### 2025-05-25
+Added progress goal + win boolean to the tracker class/ finished tracker class
