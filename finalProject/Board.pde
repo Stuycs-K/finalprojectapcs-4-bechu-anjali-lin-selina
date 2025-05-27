@@ -7,14 +7,14 @@ class Board{
     for(int i = 0; i < 9; i++){
       for(int j = 0; j < 9; j++){
         int colr = (int)(Math.random() * 6);
-        board[i][j]= new Candy(colors[colr], 0, 10);
+        board[i][j]= new Candy(colors[colr], -1, 5);
       }
     }
   }
   
   
   boolean swap(int x1, int y1, int x2, int y2){
-    if(swappable(x1,y1) || swappable(x2,y2)){
+    if(swappable(x1,y1,x2.y2) || swappable(x2,y2,x1,y1)){
       Candy temp = board[y1][x1];
       board[y1][x1]=board[y2][x2];
       board[y2][x2]=temp;
@@ -24,15 +24,32 @@ class Board{
   }
   
   boolean remove(int x, int y){
-    board[y][x] = null;
+    int spec = board[y][x].getSpecial();
+    String colr = board[y][x].getColor();
+    if(swappable(x,y,x,y)){
+      board[y][x] = null;
+      int leftRight = -1;
+      int upDown = 0;
+      while(leftRight+x > -1 && board[y][x+leftRight].getColor().equals(colr)){
+        remove(x+leftRight,y);
+        leftRight--;
+      }
+      leftRight = 1;
+      while(leftRight+x<board[0].length && board[y][x+leftRight].getColor().equals(colr)){
+        remove(x+leftRight,y);
+        leftRight--;
+      }
+      return true;
+    }
+    return false;
   }
   
   void replace(){
     
   }
 
-  boolean swappable(int x, int y){
-    Candy select = board[y][x];
+  boolean swappable(int x1, int y1, int x, int y){
+    Candy select = board[y1][x1];
     String thisColor = select.getColor();
     
     boolean swappable1 = false;
