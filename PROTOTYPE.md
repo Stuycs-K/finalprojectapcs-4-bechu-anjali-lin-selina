@@ -26,7 +26,7 @@ In main will be the setup and drawing, as well as getting points on the board.
 
 UML Diagrams and descriptions of key algorithms, classes, and how things fit together.
 
-![](image/UPDATEDUML.png)
+![](image/UMLUPDATE.png)
     
 # Intended pacing:
 
