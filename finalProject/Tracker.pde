@@ -31,4 +31,11 @@ class Tracker {
   public void increaseScore(int s) {
     score += s;
   }
+  
+  
+  public void progressGoal (int g) {
+   while (goal>=0) {
+     goal -= g;
+   }
+  }
 }
