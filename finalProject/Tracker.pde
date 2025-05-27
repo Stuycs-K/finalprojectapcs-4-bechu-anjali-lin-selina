@@ -3,6 +3,12 @@ class Tracker {
   private int score;
   private int goal;
   
+  Tracker (int moves, int goal) {
+    this.goal = goal;
+    this.moves = moves;
+    score = 0;
+  }
+  
   int getMoves() {
     return moves;
   }
@@ -41,5 +47,9 @@ class Tracker {
   
   boolean win() {
     return goal == 0;
+  }
+  
+  boolean gameOver() {
+    return (goal == 0) || (moves == 0);
   }
 }

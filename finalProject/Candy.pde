@@ -29,4 +29,7 @@ class Candy {
     score = s;
   }
   
+  void display() {
+  }
+  
 }
