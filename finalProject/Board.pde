@@ -65,20 +65,28 @@ class Board{
     
     boolean swappable2 = false;
     
-    if(x-2>=0){  
-    swappable2 = true;
+    if(x-2>=0 && board[y][x-1].getColor().equals(thisColor)){  
+      if(board[y][x-2].getColor().equals(thisColor)){
+        swappable2 = true;
+      }
     } 
     
-    if(x+2<board[0].length){
-      swappable2 = true;
+    if(x+2<board[0].length && board[y][x+1].getColor().equals(thisColor)){
+      if(board[y][x+2].getColor().equals(thisColor)){
+        swappable2 = true;
+      }
     }
     
-    if(y-2>=0){
-      swappable2 = true;
+    if(y-2>=0 && board[y-1][x].getColor().equals(thisColor)){
+      if(board[y-2][x].getColor().equals(thisColor)){
+        swappable2 = true;
+      }
     } 
     
-    if(y+2<board.length){
-      swappable2 = true;
+    if(y+2<board.length && board[y+2][x].getColor().equals(thisColor)){
+      if(board[y+2][x].getColor().equals(thisColor)){
+        swappable2 = true;
+      }
     }
     return swappable2;
   }
