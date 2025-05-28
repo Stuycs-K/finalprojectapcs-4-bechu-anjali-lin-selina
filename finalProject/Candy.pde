@@ -35,17 +35,17 @@ class Candy{
 
 
   void display() {
-    if (candyColor == "orange") {
+    if (candyColor.equals("orange")) {
     fill(255, 165, 0);
     ellipse(0, 0, 100, 200);
     }
 
-   if (candyColor == "green") {
+   if (candyColor.equals("green")) {
     fill(0, 255, 0);
     square(0, 0, 200);
     }
     
-    if (candyColor == "blue") {
+    if (candyColor.equals("blue")) {
     fill(0, 0, 255);
     ellipse(0, 0, 200, 200);
     }
