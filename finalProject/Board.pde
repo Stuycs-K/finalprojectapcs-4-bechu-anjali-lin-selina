@@ -97,12 +97,30 @@ class Board{
       }
       return true;
     }
+    if(spec == 4){
+      for(int i = 0; i < board.length; i++){
+        for(int j = 0; j < board.length; j++){
+          if(board[i][j].getColor().equals(colr)){
+            board[i][j]=null;
+          }
+        }
+      }
+      return true;
+    }
     
     return false;
   }
   
   void replace(){
-    
+    for(int i = 0; i < board.length; i++){
+      for(int j = 0; j < board.length; j++){
+        if(board[i][j]==null){
+          String[] colors = {"red", "orange", "yellow", "green", "blue", "purple"};
+          int colr = (int)(Math.random() * 6);
+          board[i][j]= new Candy(colors[colr], -1, 5);
+        }
+      }
+    }
   }
 
   boolean swappable(int x1, int y1, int x, int y){
