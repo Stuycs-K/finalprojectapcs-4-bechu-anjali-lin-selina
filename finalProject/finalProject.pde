@@ -1,3 +1,10 @@
+CandyBoard game;
+Tracker scores;
+int[] selected1, selected2;
+
+void selectSpace(){
+}
+
 
  void setup() {
    size(1200, 900);
