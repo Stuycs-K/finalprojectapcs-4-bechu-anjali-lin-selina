@@ -1,7 +1,7 @@
 class CandyBoard{
   private Candy[][] board;
   
-  Board(){
+  CandyBoard(){
     board = new Candy[9][9];
     String[] colors = {"red", "orange", "yellow", "green", "blue", "purple"};
     for(int i = 0; i < 9; i++){
@@ -14,7 +14,7 @@ class CandyBoard{
   
   
   boolean swap(int x1, int y1, int x2, int y2){
-    if(swappable(x1,y1,x2.y2) || swappable(x2,y2,x1,y1)){
+    if(swappable(x1,y1,x2,y2) || swappable(x2,y2,x1,y1)){
       Candy temp = board[y1][x1];
       board[y1][x1]=board[y2][x2];
       board[y2][x2]=temp;
