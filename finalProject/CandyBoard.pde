@@ -1,4 +1,4 @@
-class Board{
+class CandyBoard{
   private Candy[][] board;
   
   Board(){
