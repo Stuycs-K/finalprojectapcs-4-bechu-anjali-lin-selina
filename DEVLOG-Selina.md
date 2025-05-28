@@ -22,3 +22,6 @@ Updated UML diagram as specified by Mr K in class. Continued working on methods 
 ### 2025-05-27-25 - Continued writing methods in Board
 One class period, worked on remove in Board.
 Half hour at home, finished removed and special candy interaction in remove in Board. Started replace.
+
+### 2025-05-28-25 - More in Board -> CandyBoard and started making
+Half class period, renamed tab from Board to CandyBoard. Started setup and making selector for squares.

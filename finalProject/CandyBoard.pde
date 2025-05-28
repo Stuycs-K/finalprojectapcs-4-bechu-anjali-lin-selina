@@ -121,6 +121,11 @@ class CandyBoard{
         }
       }
     }
+    for(int i = 0; i < board.length; i++){
+      for(int j = 0; j < board.length; j++){
+        
+      }
+    }
   }
 
   boolean swappable(int x1, int y1, int x, int y){
