@@ -19,6 +19,15 @@ void selectSpace(){
         temp.display(i,j);
       }
     }
+    scores = new Tracker(30,3000);
+    textSize(40);
+    fill(0);
+    text("Moves Left: ", 950, 100);
+    text(scores.getMoves() + "", 1025,200);
+    text("Current Score: ", 925, 400);
+    text(scores.getScore() + "", 1025,500);
+    text("Goal Score: ", 950, 700);
+    text(scores.getGoal() + "", 1000,800);
  }
  
  void display() {
