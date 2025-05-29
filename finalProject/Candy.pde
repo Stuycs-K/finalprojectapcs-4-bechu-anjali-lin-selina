@@ -1,3 +1,5 @@
+PShape purpleCandy;
+
 class Candy{
   private String candyColor;
   private int special;
@@ -37,18 +39,28 @@ class Candy{
   void display() {
     if (candyColor.equals("orange")) {
     fill(255, 165, 0);
-    ellipse(0, 0, 100, 200);
+    ellipse(0, 0, 50, 80);
     }
 
    if (candyColor.equals("green")) {
     fill(0, 255, 0);
-    square(0, 0, 200);
+    square(0, 0, 80);
     }
     
     if (candyColor.equals("blue")) {
     fill(0, 0, 255);
-    ellipse(0, 0, 200, 200);
+    ellipse(0, 0, 80, 80);
     }
+    
+    purpleCandy = createShape();
+    purpleCandy.beginShape();
+    purpleCandy.fill(128, 0, 128);
+    purpleCandy.noStroke();
+    purpleCandy.vertex(0, 0);
+    purpleCandy.vertex(40, 0);
+    purpleCandy.vertex(20, 20);
+    purpleCandy.vertex(100
+    
 
   }
 
