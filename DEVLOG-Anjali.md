@@ -15,3 +15,9 @@ Added the candy constructor
 
 ### 2025-05-26
 Added progress goal + win boolean to the tracker class/ finished tracker class
+
+### 2025-05-27
+Fixed some bugs + added the display function (with the simple candies like the blue one and green one)
+
+### 2025-05-28
+Creating new shapes for the candies using pshape (for more unique shapes for purple candies etc)
