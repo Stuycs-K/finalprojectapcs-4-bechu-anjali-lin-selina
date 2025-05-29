@@ -52,14 +52,13 @@ class Candy{
     ellipse(0, 0, 80, 80);
     }
     
-    purpleCandy = createShape();
-    purpleCandy.beginShape();
-    purpleCandy.fill(128, 0, 128);
-    purpleCandy.noStroke();
-    purpleCandy.vertex(0, 0);
-    purpleCandy.vertex(40, 0);
-    purpleCandy.vertex(20, 20);
-    purpleCandy.vertex(100
+    //purpleCandy = createShape();
+    //purpleCandy.beginShape();
+    //purpleCandy.fill(128, 0, 128);
+    //purpleCandy.noStroke();
+    //purpleCandy.vertex(0, 0);
+    //purpleCandy.vertex(40, 0);
+    //purpleCandy.vertex(20, 20);
     
 
   }
