@@ -123,7 +123,10 @@ class CandyBoard{
     }
     for(int i = 0; i < board.length; i++){
       for(int j = 0; j < board.length; j++){
-        
+       if(swappable(i,j,i,j)){
+         remove(i,j);
+         replace();
+       } 
       }
     }
   }

@@ -25,3 +25,6 @@ Half hour at home, finished removed and special candy interaction in remove in B
 
 ### 2025-05-28-25 - More in Board -> CandyBoard and started making
 Half class period, renamed tab from Board to CandyBoard. Started setup and making selector for squares.
+
+### 2025-05-29-25 - Space selector in main + minor changes to CandyBoard
+Half hour at home, made selector for spaces in finalProject and added to replace().

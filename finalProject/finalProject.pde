@@ -1,8 +1,43 @@
 CandyBoard game;
 Tracker scores;
-int[] selected1, selected2;
+int[] selected1 = {-1, -1};
+int[] selected2 = {-1,-1};
 
-void selectSpace(){
+void draw(){
+
+}
+
+void mouseClicked(){
+  int x = mouseX/100;
+  int y = mouseY/100;
+  
+  if(selected1[0]!=-1 && selected2[0]==-1){
+      selected2[0]=x;
+      selected2[1]=y;
+      x=-2;
+      y=-2;
+    }
+  
+  
+  if(selected1[0] == -1){
+    selected1[0]=x;
+    selected1[1]=y;
+    x=-2;
+    y=-2;
+  }
+  
+   
+  if(selected1[0]==x && selected1[1]==y){
+    selected1[0]=-1;
+    selected1[1]=-1;
+  }
+  
+  if(selected2[0]==x && selected2[1]==y){
+    selected2[0]=-1;
+    selected2[1]=-1;
+  }
+    
+ 
 }
 
 
