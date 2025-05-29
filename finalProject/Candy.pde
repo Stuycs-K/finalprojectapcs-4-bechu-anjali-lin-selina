@@ -36,7 +36,7 @@ class Candy{
   }
 
 
-  void display() {
+  void display(int x, int y) {
     if (candyColor.equals("orange")) {
     fill(255, 165, 0);
     ellipse(0, 0, 50, 80);
@@ -44,7 +44,7 @@ class Candy{
 
    if (candyColor.equals("green")) {
     fill(0, 255, 0);
-    square(0, 0, 80);
+    square(x*100 +10, y*100 +10, 80);
     }
     
     if (candyColor.equals("blue")) {
