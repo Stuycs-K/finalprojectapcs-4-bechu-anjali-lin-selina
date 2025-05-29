@@ -1,6 +1,7 @@
 PShape purpleCandy;
 PShape purpleCandy2;
 PShape circle;
+PShape pc;
 
 class Candy{
   private String candyColor;
@@ -54,13 +55,15 @@ class Candy{
     ellipse(x*100 +50, y*100 +50, 80, 80);
     }
     
+      pc = createShape(GROUP);
+  
 purpleCandy = createShape();
     purpleCandy.beginShape();
     purpleCandy.fill(180, 0, 180);
     purpleCandy.noStroke();
-    purpleCandy.vertex(-40, 0);
-    purpleCandy.vertex(-10, -15);
-    purpleCandy.vertex(-10, 15);
+    purpleCandy.vertex(30, 25);
+    purpleCandy.vertex(60, 10);
+    purpleCandy.vertex(60, 40);
     purpleCandy.endShape(CLOSE);
     
     circle = createShape(ELLIPSE, 30, 25, 20, 20);
@@ -71,13 +74,15 @@ purpleCandy = createShape();
     purpleCandy2.beginShape();
     purpleCandy2.fill(180, 0, 180);
     purpleCandy2.noStroke();
-    purpleCandy2.vertex(40, 0);
-    purpleCandy2.vertex(10, -15);
-    purpleCandy2.vertex(10, 15);
+    purpleCandy2.vertex(40, 25);
+    purpleCandy2.vertex(10, 10);
+    purpleCandy2.vertex(10, 40);
     purpleCandy2.endShape(CLOSE);
     
-    
-
+    pc.addChild(purpleCandy);
+    pc.addChild(purpleCandy2);
+    pc.addChild(circle);
+   
   }
 
 }
