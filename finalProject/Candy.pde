@@ -52,13 +52,24 @@ class Candy{
     ellipse(0, 0, 80, 80);
     }
     
-    //purpleCandy = createShape();
-    //purpleCandy.beginShape();
-    //purpleCandy.fill(128, 0, 128);
-    //purpleCandy.noStroke();
-    //purpleCandy.vertex(0, 0);
-    //purpleCandy.vertex(40, 0);
-    //purpleCandy.vertex(20, 20);
+    purpleCandy = createShape();
+    purpleCandy.beginShape();
+    purpleCandy.fill(180, 0, 180);
+    purpleCandy.noStroke();
+    purpleCandy.vertex(-30, 0);
+    purpleCandy.vertex(-10, -20);
+    purpleCandy.vertex(-10, 20);
+    purpleCandy.endShape(CLOSE);
+    
+    PShape purpleCandy2 = createShape();
+    purpleCandy2.beginShape();
+    purpleCandy2.fill(180, 0, 180);
+    purpleCandy2.noStroke();
+    purpleCandy2.vertex(30, 0);
+    purpleCandy2.vertex(10, -20);
+    purpleCandy2.vertex(10, 20);
+    purpleCandy2.endShape(CLOSE);
+    
     
 
   }
