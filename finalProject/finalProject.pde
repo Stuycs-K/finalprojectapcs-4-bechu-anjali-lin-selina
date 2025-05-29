@@ -12,6 +12,8 @@ void selectSpace(){
       line(0,i,900,i);
       line(i,0,i,900);
     }
+    game = new CandyBoard();
+    
  }
  
  void display() {
