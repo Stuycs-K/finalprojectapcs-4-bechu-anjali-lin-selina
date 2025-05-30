@@ -12,6 +12,10 @@ class CandyBoard{
     }
   }
   
+  Candy[][] getBoard(){
+    return board;
+  }
+  
   
   boolean swap(int x1, int y1, int x2, int y2){
     if(swappable(x1,y1,x2,y2) || swappable(x2,y2,x1,y1)){

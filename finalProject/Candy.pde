@@ -1,4 +1,7 @@
 PShape purpleCandy;
+PShape purpleCandy2;
+PShape circle;
+PShape pc;
 
 class Candy{
   private String candyColor;
@@ -36,41 +39,65 @@ class Candy{
   }
 
 
-  void display() {
+  void display(int x, int y) {
     if (candyColor.equals("orange")) {
     fill(255, 165, 0);
-    ellipse(0, 0, 50, 80);
+    ellipse(x*100 +50, y*100 +50, 50, 80);
     }
 
    if (candyColor.equals("green")) {
     fill(0, 255, 0);
-    square(0, 0, 80);
+    square(x*100 +10, y*100 +10, 80);
     }
     
     if (candyColor.equals("blue")) {
     fill(0, 0, 255);
-    ellipse(0, 0, 80, 80);
+    ellipse(x*100 +50, y*100 +50, 80, 80);
     }
     
+    pc = createShape(GROUP);
+  
     purpleCandy = createShape();
     purpleCandy.beginShape();
     purpleCandy.fill(180, 0, 180);
     purpleCandy.noStroke();
-    purpleCandy.vertex(-30, 0);
-    purpleCandy.vertex(-10, -20);
-    purpleCandy.vertex(-10, 20);
+    purpleCandy.vertex(30, 25);
+    purpleCandy.vertex(60, 10);
+    purpleCandy.vertex(60, 40);
     purpleCandy.endShape(CLOSE);
     
-    PShape purpleCandy2 = createShape();
+    circle = createShape(ELLIPSE, 30, 25, 20, 20);
+    circle.setFill(color(0, 0, 255));
+    circle.setStroke(false);
+  
+    purpleCandy2 = createShape();
     purpleCandy2.beginShape();
     purpleCandy2.fill(180, 0, 180);
     purpleCandy2.noStroke();
-    purpleCandy2.vertex(30, 0);
-    purpleCandy2.vertex(10, -20);
-    purpleCandy2.vertex(10, 20);
+    purpleCandy2.vertex(40, 25);
+    purpleCandy2.vertex(10, 10);
+    purpleCandy2.vertex(10, 40);
     purpleCandy2.endShape(CLOSE);
     
+    pc.addChild(purpleCandy);
+    pc.addChild(purpleCandy2);
+    pc.addChild(circle);
     
+    
+        top = createShape(ELLIPSE, 35, 25, 40, 20);
+    top.setFill(color(180, 0, 180));
+    top.noStroke();
+    
+    
+    bottom = createShape();
+    bottom.beginShape();
+    bottom.fill(100, 100, 100);
+    bottom.noStroke();
+    bottom.vertex(20, 10);
+    bottom.vertex(40, 10);
+    bottom.vertex(40, 30);
+    bottom.vertex(20, 30);
+    bottom.endShape(CLOSE);
 
   }
 
