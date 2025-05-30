@@ -28,7 +28,7 @@ Half class period, renamed tab from Board to CandyBoard. Started setup and makin
 
 ### 2025-05-29-25 - Space selector in main + minor changes to CandyBoard
 Half hour at home, made selector for spaces in finalProject and added to replace().
-One class period, worked on setup and display. 
+One class period, worked on setup and display.
 
 ### 2025-05-29-25 - More in mousePressed + minor changes to CandyBoard
 Half hour at home, fixed stack overflow error in CandyBoard, worked on displaying selected space in mousePressed.

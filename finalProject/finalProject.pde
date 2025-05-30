@@ -43,21 +43,20 @@ void mouseClicked(){
     selected1[0]=-1;
     selected1[1]=-1;
     stroke(0);
-    line(selected1[0]*100, selected1[1] * 100, (selected1[0]+1) *100, selected1[1]*100);
-    line(selected1[0]*100, selected1[1] * 100, selected1[0] *100, (selected1[1]+1)*100);
-    line((selected1[0]+1)*100, selected1[1] * 100, (selected1[0]+1) *100, (selected1[1]+1)*100);
-    line(selected1[0]*100, (selected1[1]+1) * 100, (selected1[0]+1) *100, (selected1[1]+1)*100);
+    line(x*100, y * 100, (x+1) *100, y*100);
+    line(x*100, y * 100, x *100, (y+1)*100);
+    line((x+1)*100, y * 100, (x+1) *100, (y+1)*100);
+    line(x*100, (y+1) * 100, (x+1) *100, (y+1)*100);
   }
   
   if(selected2[0]==x && selected2[1]==y){
     selected2[0]=-1;
     selected2[1]=-1;
     stroke(0);
-    line(selected2[0]*100, selected2[1] * 100, (selected2[0]+1) *100, selected2[1]*100);
-    line(selected2[0]*100, selected2[1] * 100, selected2[0] *100, (selected2[1]+1)*100);
-    line((selected2[0]+1)*100, selected2[1] * 100, (selected2[0]+1) *100, (selected2[1]+1)*100);
-    line(selected2[0]*100, (selected2[1]+1) * 100, (selected2[0]+1) *100, (selected2[1]+1)*100);
-
+    line(x*100, y * 100, (x+1) *100, y*100);
+    line(x*100, y * 100, x *100, (y+1)*100);
+    line((x+1)*100, y * 100, (x+1) *100, (y+1)*100);
+    line(x*100, (y+1) * 100, (x+1) *100, (y+1)*100);
   }
     
  
