@@ -2,6 +2,7 @@ PShape purpleCandy;
 PShape purpleCandy2;
 PShape circle;
 PShape pc;
+PShape gumdrop, top, bottom;
 
 class Candy{
   private String candyColor;
@@ -84,21 +85,25 @@ class Candy{
     pc.addChild(circle);
     
     
-   //     top = createShape(ELLIPSE, 35, 25, 40, 20);
-   //top.setFill(color(180, 0, 180));
-   //top.noStroke();
+    gumdrop = createShape(GROUP);
     
+    top = createShape(ELLIPSE, 50, 49, 31, 20);
+    top.setFill(color(180, 0, 180));
+    top.setStroke(false);
+    gumdrop.addChild(top);
     
- //   bottom = createShape();
-   // bottom.beginShape();
-    //bottom.fill(100, 100, 100);
-    //bottom.noStroke();
-    //bottom.vertex(20, 10);
-    //bottom.vertex(40, 10);
-    //bottom.vertex(40, 30);
-    //bottom.vertex(20, 30);
-    //bottom.endShape(CLOSE);
-
+    bottom = createShape();
+    bottom.beginShape();
+    bottom.fill(180, 0, 180);
+    bottom.noStroke();
+    bottom.vertex(35, 50);
+    bottom.vertex(65, 50);
+    bottom.vertex(70, 80);
+    bottom.vertex(30, 80);
+    bottom.endShape(CLOSE);
+    
+    gumdrop.addChild(bottom);
   }
+  
 
 }
