@@ -16,6 +16,9 @@ void mouseClicked(){
       selected2[1]=y;
       x=-2;
       y=-2;
+      stroke(255);
+      line(x*100, y * 100, (x+1) *100, (y+1)*100);
+      stroke(0);
     }
   
   
@@ -24,6 +27,12 @@ void mouseClicked(){
     selected1[1]=y;
     x=-2;
     y=-2;
+    stroke(255);
+    line(x*100, y * 100, (x+1) *100, y*100);
+    line(x*100, y * 100, x *100, (y+1)*100);
+    line((x+1)*100, y * 100, (x+1) *100, (y+1)*100);
+    line(x*100, (y+1) * 100, (x+1) *100, (y+1)*100);
+    stroke(0);
   }
   
    
@@ -38,6 +47,10 @@ void mouseClicked(){
   }
     
  
+}
+
+void keyPressed(){
+
 }
 
 
