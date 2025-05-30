@@ -24,3 +24,6 @@ Creating new shapes for the candies using pshape (for more unique shapes for pur
 
 ### 2025-05-29
 Finished making the purple candy and finished creating the gumdrop candy
+
+### 2025-05-30
+finished creating the final candy adn fixed the orientation of the prior ones on the board
