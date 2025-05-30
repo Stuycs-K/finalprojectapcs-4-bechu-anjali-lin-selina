@@ -21,3 +21,6 @@ Fixed some bugs + added the display function (with the simple candies like the b
 
 ### 2025-05-28
 Creating new shapes for the candies using pshape (for more unique shapes for purple candies etc)
+
+### 2025-05-29
+Finished making the purple candy and finished creating the gumdrop candy
