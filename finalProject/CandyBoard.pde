@@ -10,6 +10,7 @@ class CandyBoard{
         board[i][j]= new Candy(colors[colr], -1, 5);
       }
     }
+    replace();
   }
   
   Candy[][] getBoard(){
@@ -51,7 +52,7 @@ class CandyBoard{
         total++;
       }
       int down = 1;
-      while(down+x<board.length && board[y+down][x].getColor().equals(colr)){
+      while(down+y<board.length && board[y+down][x].getColor().equals(colr)){
         board[y+down][x]=null;
         down++;
         total++;
@@ -99,6 +100,7 @@ class CandyBoard{
           }
         }
       }
+      replace();
       return true;
     }
     if(spec == 4){
@@ -109,9 +111,10 @@ class CandyBoard{
           }
         }
       }
+      replace();
       return true;
     }
-    
+    replace();
     return false;
   }
   
@@ -129,7 +132,6 @@ class CandyBoard{
       for(int j = 0; j < board.length; j++){
        if(swappable(i,j,i,j)){
          remove(i,j);
-         replace();
        } 
       }
     }
@@ -137,29 +139,32 @@ class CandyBoard{
 
   boolean swappable(int x1, int y1, int x, int y){
     Candy select = board[y1][x1];
+    if(select == null){
+      return false;
+    }
     String thisColor = select.getColor();
     
     boolean swappable1 = false;
     
-    if(x-1>=0){
+    if(x-1>=0 && board[y][x-1] !=null){
       if(board[y][x-1].getColor().equals(thisColor)){
         swappable1 = true;
       }
     }
     
-    if(x+1<board[0].length){
+    if(x+1<board[0].length && board[y][x+1] != null){
       if(board[y][x+1].getColor().equals(thisColor)){
         swappable1 = true;
       }
     }
     
-    if(y-1>=0){
+    if(y-1>=0 && board[y-1][x] != null){
       if(board[y-1][x].getColor().equals(thisColor)){
         swappable1 = true;
       }
     }
     
-    if(y+1<board.length){
+    if(y+1<board.length && board[y+1][x] != null){
       if(board[y+1][x].getColor().equals(thisColor)){
         swappable1 = true;
       }
@@ -171,25 +176,25 @@ class CandyBoard{
     
     boolean swappable2 = false;
     
-    if(x-2>=0 && board[y][x-1].getColor().equals(thisColor)){  
+    if(x-2>=0 && board[y][x-2] != null && board[y][x-1] != null && board[y][x-1].getColor().equals(thisColor)){  
       if(board[y][x-2].getColor().equals(thisColor)){
         swappable2 = true;
       }
     } 
     
-    if(x+2<board[0].length && board[y][x+1].getColor().equals(thisColor)){
+    if(x+2<board[0].length && board[y][x+2] != null && board[y][x+1] != null && board[y][x+1].getColor().equals(thisColor)){
       if(board[y][x+2].getColor().equals(thisColor)){
         swappable2 = true;
       }
     }
     
-    if(y-2>=0 && board[y-1][x].getColor().equals(thisColor)){
+    if(y-2>=0 && board[y-2][x] != null && board[y-1][x] != null && board[y-1][x].getColor().equals(thisColor)){
       if(board[y-2][x].getColor().equals(thisColor)){
         swappable2 = true;
       }
     } 
     
-    if(y+2<board.length && board[y+2][x].getColor().equals(thisColor)){
+    if(y+2<board.length && board[y+2][x] != null && board[y+1][x] != null && board[y+1][x].getColor().equals(thisColor)){
       if(board[y+2][x].getColor().equals(thisColor)){
         swappable2 = true;
       }

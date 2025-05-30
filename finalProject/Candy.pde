@@ -84,20 +84,20 @@ class Candy{
     pc.addChild(circle);
     
     
-        top = createShape(ELLIPSE, 35, 25, 40, 20);
-    top.setFill(color(180, 0, 180));
-    top.noStroke();
+   //     top = createShape(ELLIPSE, 35, 25, 40, 20);
+   //top.setFill(color(180, 0, 180));
+   //top.noStroke();
     
     
-    bottom = createShape();
-    bottom.beginShape();
-    bottom.fill(100, 100, 100);
-    bottom.noStroke();
-    bottom.vertex(20, 10);
-    bottom.vertex(40, 10);
-    bottom.vertex(40, 30);
-    bottom.vertex(20, 30);
-    bottom.endShape(CLOSE);
+ //   bottom = createShape();
+   // bottom.beginShape();
+    //bottom.fill(100, 100, 100);
+    //bottom.noStroke();
+    //bottom.vertex(20, 10);
+    //bottom.vertex(40, 10);
+    //bottom.vertex(40, 30);
+    //bottom.vertex(20, 30);
+    //bottom.endShape(CLOSE);
 
   }
 
