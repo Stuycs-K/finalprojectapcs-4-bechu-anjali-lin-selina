@@ -5,13 +5,14 @@ int[] selected2 = {-1,-1};
 
 void draw(){
   mousePressed();
+  keyPressed();
 }
 
 void mouseClicked(){
-  int x = mouseX/100;
+  int x = min(8,mouseX/100);
   int y = mouseY/100;
   
-  if(selected1[0]!=-1 && (selected1[0] !=x && selected1[1] !=y) &&selected2[0]==-1){
+  if(selected1[0]!=-1 && (selected1[0] !=x || selected1[1] !=y) &&selected2[0]==-1){
       selected2[0]=x;
       selected2[1]=y;
       x=-2;
@@ -63,7 +64,24 @@ void mouseClicked(){
 }
 
 void keyPressed(){
+  if(selected1[0] != -1 && selected1[1] !=-1 && selected2[0] != -1 && selected2[1]!=-1){
+    game.swap(selected1[0],selected1[1],selected2[0],selected2[1]);
+    stroke(0);
+    line(selected1[0]*100, selected1[1] * 100, (selected1[0]+1) *100, selected1[1]*100);
+    line(selected1[0]*100, selected1[1] * 100, selected1[0] *100, (selected1[1]+1)*100);
+    line((selected1[0]+1)*100, selected1[1] * 100, (selected1[0]+1) *100, (selected1[1]+1)*100);
+    line(selected1[0]*100, (selected1[1]+1) * 100, (selected1[0]+1) *100, (selected1[1]+1)*100);
+    line(selected2[0]*100, selected2[1] * 100, (selected2[0]+1) *100, selected2[1]*100);
+    line(selected2[0]*100, selected2[1] * 100, selected2[0] *100, (selected2[1]+1)*100);
+    line((selected2[0]+1)*100, selected2[1] * 100, (selected2[0]+1) *100, (selected2[1]+1)*100);
+    line(selected2[0]*100, (selected2[1]+1) * 100, (selected2[0]+1) *100, (selected2[1]+1)*100);
 
+    selected1[0] = -1;
+    selected1[1] = -1;
+    selected2[0] = -1;
+    selected2[1] = -1;
+
+  }
 }
 
 
