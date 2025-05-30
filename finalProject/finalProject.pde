@@ -4,20 +4,23 @@ int[] selected1 = {-1, -1};
 int[] selected2 = {-1,-1};
 
 void draw(){
-
+  mousePressed();
 }
 
 void mouseClicked(){
   int x = mouseX/100;
   int y = mouseY/100;
   
-  if(selected1[0]!=-1 && selected2[0]==-1){
+  if(selected1[0]!=-1 && (selected1[0] !=x && selected1[1] !=y) &&selected2[0]==-1){
       selected2[0]=x;
       selected2[1]=y;
       x=-2;
       y=-2;
       stroke(255);
-      line(x*100, y * 100, (x+1) *100, (y+1)*100);
+      line(selected2[0]*100, selected2[1] * 100, (selected2[0]+1) *100, selected2[1]*100);
+      line(selected2[0]*100, selected2[1] * 100, selected2[0] *100, (selected2[1]+1)*100);
+      line((selected2[0]+1)*100, selected2[1] * 100, (selected2[0]+1) *100, (selected2[1]+1)*100);
+      line(selected2[0]*100, (selected2[1]+1) * 100, (selected2[0]+1) *100, (selected2[1]+1)*100);
       stroke(0);
     }
   
@@ -28,10 +31,10 @@ void mouseClicked(){
     x=-2;
     y=-2;
     stroke(255);
-    line(x*100, y * 100, (x+1) *100, y*100);
-    line(x*100, y * 100, x *100, (y+1)*100);
-    line((x+1)*100, y * 100, (x+1) *100, (y+1)*100);
-    line(x*100, (y+1) * 100, (x+1) *100, (y+1)*100);
+    line(selected1[0]*100, selected1[1] * 100, (selected1[0]+1) *100, selected1[1]*100);
+    line(selected1[0]*100, selected1[1] * 100, selected1[0] *100, (selected1[1]+1)*100);
+    line((selected1[0]+1)*100, selected1[1] * 100, (selected1[0]+1) *100, (selected1[1]+1)*100);
+    line(selected1[0]*100, (selected1[1]+1) * 100, (selected1[0]+1) *100, (selected1[1]+1)*100);
     stroke(0);
   }
   
@@ -39,11 +42,22 @@ void mouseClicked(){
   if(selected1[0]==x && selected1[1]==y){
     selected1[0]=-1;
     selected1[1]=-1;
+    stroke(0);
+    line(selected1[0]*100, selected1[1] * 100, (selected1[0]+1) *100, selected1[1]*100);
+    line(selected1[0]*100, selected1[1] * 100, selected1[0] *100, (selected1[1]+1)*100);
+    line((selected1[0]+1)*100, selected1[1] * 100, (selected1[0]+1) *100, (selected1[1]+1)*100);
+    line(selected1[0]*100, (selected1[1]+1) * 100, (selected1[0]+1) *100, (selected1[1]+1)*100);
   }
   
   if(selected2[0]==x && selected2[1]==y){
     selected2[0]=-1;
     selected2[1]=-1;
+    stroke(0);
+    line(selected2[0]*100, selected2[1] * 100, (selected2[0]+1) *100, selected2[1]*100);
+    line(selected2[0]*100, selected2[1] * 100, selected2[0] *100, (selected2[1]+1)*100);
+    line((selected2[0]+1)*100, selected2[1] * 100, (selected2[0]+1) *100, (selected2[1]+1)*100);
+    line(selected2[0]*100, (selected2[1]+1) * 100, (selected2[0]+1) *100, (selected2[1]+1)*100);
+
   }
     
  
