@@ -55,29 +55,30 @@ class Candy{
     fill(0, 0, 255);
     ellipse(x*100 +50, y*100 +50, 80, 80);
     }
+   
     
     pc = createShape(GROUP);
   
     purpleCandy = createShape();
     purpleCandy.beginShape();
-    purpleCandy.fill(180, 0, 180);
+    purpleCandy.fill(203, 150, 227);
     purpleCandy.noStroke();
-    purpleCandy.vertex(30, 25);
-    purpleCandy.vertex(60, 10);
-    purpleCandy.vertex(60, 40);
+    purpleCandy.vertex(45, 50);
+    purpleCandy.vertex(75, 35);
+    purpleCandy.vertex(75, 65);
     purpleCandy.endShape(CLOSE);
     
-    circle = createShape(ELLIPSE, 30, 25, 20, 20);
-    circle.setFill(color(0, 0, 255));
+    circle = createShape(ELLIPSE, 48, 50, 20, 20);
+    circle.setFill(color(203, 150, 227));
     circle.setStroke(false);
   
     purpleCandy2 = createShape();
     purpleCandy2.beginShape();
-    purpleCandy2.fill(180, 0, 180);
+    purpleCandy2.fill(203, 150, 227);
     purpleCandy2.noStroke();
-    purpleCandy2.vertex(40, 25);
-    purpleCandy2.vertex(10, 10);
-    purpleCandy2.vertex(10, 40);
+    purpleCandy2.vertex(50, 50);
+    purpleCandy2.vertex(20, 35);
+    purpleCandy2.vertex(20, 65);
     purpleCandy2.endShape(CLOSE);
     
     pc.addChild(purpleCandy);
@@ -88,13 +89,13 @@ class Candy{
     gumdrop = createShape(GROUP);
     
     top = createShape(ELLIPSE, 50, 49, 31, 20);
-    top.setFill(color(180, 0, 180));
+    top.setFill(color(255, 130, 150));
     top.setStroke(false);
     gumdrop.addChild(top);
     
     bottom = createShape();
     bottom.beginShape();
-    bottom.fill(180, 0, 180);
+    bottom.fill(255, 130, 150);
     bottom.noStroke();
     bottom.vertex(35, 50);
     bottom.vertex(65, 50);
@@ -103,6 +104,14 @@ class Candy{
     bottom.endShape(CLOSE);
     
     gumdrop.addChild(bottom);
+    
+    if (candyColor.equals("purple")) {
+      shape(pc, x*100, y*100);
+    }
+    
+    if (candyColor.equals("red")) {
+      shape(gumdrop, x*100, y*100);
+    }
   }
   
 
