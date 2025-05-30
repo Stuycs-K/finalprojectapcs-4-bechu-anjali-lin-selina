@@ -23,6 +23,7 @@ class CandyBoard{
       Candy temp = board[y1][x1];
       board[y1][x1]=board[y2][x2];
       board[y2][x2]=temp;
+      replace();
       return true;
     }
     return false;

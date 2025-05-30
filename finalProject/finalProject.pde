@@ -6,6 +6,12 @@ int[] selected2 = {-1,-1};
 void draw(){
   mousePressed();
   keyPressed();
+   for(int i = 0; i < 9; i++){
+      for(int j = 0; j < 9; j++){
+        Candy temp = game.getBoard()[j][i];
+        temp.display(i,j);
+      }
+    }
 }
 
 void mouseClicked(){
@@ -64,7 +70,7 @@ void mouseClicked(){
 }
 
 void keyPressed(){
-  if(selected1[0] != -1 && selected1[1] !=-1 && selected2[0] != -1 && selected2[1]!=-1){
+  if(key == ' ' && selected1[0] != -1 && selected1[1] !=-1 && selected2[0] != -1 && selected2[1]!=-1){
     game.swap(selected1[0],selected1[1],selected2[0],selected2[1]);
     stroke(0);
     line(selected1[0]*100, selected1[1] * 100, (selected1[0]+1) *100, selected1[1]*100);
@@ -87,16 +93,17 @@ void keyPressed(){
 
  void setup() {
    size(1200, 900);
-    for(int i= 0; i <=900;i+=100){
-      line(0,i,900,i);
-      line(i,0,i,900);
-    }
+    
     game = new CandyBoard();
     for(int i = 0; i < 9; i++){
       for(int j = 0; j < 9; j++){
         Candy temp = game.getBoard()[j][i];
         temp.display(i,j);
       }
+    }
+    for(int i= 0; i <=900;i+=100){
+      line(0,i,900,i);
+      line(i,0,i,900);
     }
     scores = new Tracker(30,3000);
     textSize(40);
