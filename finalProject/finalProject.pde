@@ -4,7 +4,11 @@ int[] selected1 = {-1, -1};
 int[] selected2 = {-1,-1};
 
 void draw(){
-  keyPressed();
+  //fill(202);
+  //for(int i= 0; i <=900;i+=100){
+  //    line(0,i,900,i);
+  //    line(i,0,i,900);
+  //  }
    for(int i = 0; i < 9; i++){
       for(int j = 0; j < 9; j++){
         Candy temp = game.getBoard()[j][i];
@@ -14,6 +18,7 @@ void draw(){
     
     drawScores();
     mousePressed();
+      keyPressed();
     
     if (scores.win() || scores.gameOver()) {
       display();
@@ -26,7 +31,7 @@ void mouseClicked(){
   }
   
   int x = min(8,mouseX/100);
-  int y = mouseY/100;
+  int y = min(8, mouseY/100);
   
   if(selected1[0]!=-1 && (selected1[0] !=x || selected1[1] !=y) &&selected2[0]==-1){
       selected2[0]=x;
