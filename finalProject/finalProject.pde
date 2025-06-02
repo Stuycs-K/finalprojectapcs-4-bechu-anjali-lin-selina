@@ -4,7 +4,6 @@ int[] selected1 = {-1, -1};
 int[] selected2 = {-1,-1};
 
 void draw(){
-  mousePressed();
   keyPressed();
    for(int i = 0; i < 9; i++){
       for(int j = 0; j < 9; j++){
@@ -12,9 +11,20 @@ void draw(){
         temp.display(i,j);
       }
     }
+    
+    drawScores();
+    mousePressed();
+    
+    if (scores.win() || scores.gameOver()) {
+      display();
+    }
 }
 
 void mouseClicked(){
+  if (scores.win() || scores.gameOver()) {
+    return;
+  }
+  
   int x = min(8,mouseX/100);
   int y = mouseY/100;
   
@@ -110,7 +120,7 @@ void keyPressed(){
  }
  
  
- void drawScores {
+ void drawScores() {
    textSize(40);
     fill(0);
     text("Moves Left: ", 950, 100);
@@ -133,12 +143,6 @@ void keyPressed(){
  
  
  void display() {
-   
-   
-   
-   
-   
-   
    //code for when the game ends
    if (scores.win() || scores.gameOver()) {
      fill(255);
@@ -149,8 +153,5 @@ void keyPressed(){
      } else {
        text("Game Over!", 950, 200);
      }
-   }
-     
-     
-     
+   }   
  }
