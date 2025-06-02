@@ -3,6 +3,23 @@ Tracker scores;
 int[] selected1 = {-1, -1};
 int[] selected2 = {-1,-1};
 
+ void setup() {
+   size(1200, 900);
+    
+    game = new CandyBoard();
+    for(int i = 0; i < 9; i++){
+      for(int j = 0; j < 9; j++){
+        Candy temp = game.getBoard()[j][i];
+        temp.display(i,j);
+      }
+    }
+    for(int i= 0; i <=900;i+=100){
+      line(0,i,900,i);
+      line(i,0,i,900);
+    }
+ }
+ 
+ 
 void draw(){
   mousePressed();
   keyPressed();
@@ -99,23 +116,6 @@ void keyPressed(){
 
   }
 }
-
-
- void setup() {
-   size(1200, 900);
-    
-    game = new CandyBoard();
-    for(int i = 0; i < 9; i++){
-      for(int j = 0; j < 9; j++){
-        Candy temp = game.getBoard()[j][i];
-        temp.display(i,j);
-      }
-    }
-    for(int i= 0; i <=900;i+=100){
-      line(0,i,900,i);
-      line(i,0,i,900);
-    }
- }
  
  
  void drawScores() {
