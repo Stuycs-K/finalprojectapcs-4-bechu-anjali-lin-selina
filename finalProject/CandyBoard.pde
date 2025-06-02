@@ -118,11 +118,11 @@ class CandyBoard{
           }
         }
       }
-      replace();
-      return total;
+      
+      return total + replace();
     }
     replace();
-    return total;
+    return total + replace();
   }
   
   int replace(){
