@@ -36,3 +36,6 @@ One class period, displaying selected spaces, inputting selected spaces in game.
 
 ### 2025-06-01/02-25 - Updating displays of board and scores
 Evening at home, changed board methods to return ints to update score with them, changed draw and keyPressed to update current board.
+
+### 2025-06-02-25 - Fixing errors in remove and sweap
+One class period, testing and fixing errors in swap and remove that caused inaccurate changes to board.
