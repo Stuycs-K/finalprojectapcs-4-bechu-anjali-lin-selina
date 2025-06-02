@@ -21,10 +21,10 @@ class Candy{
     return score;
   }
   // -1 is regular
-  // 1 is striped (up)
-  // 2 is striped (across)
-  // 3 is wrapped
-  // 4 is bomb
+  // 1 is striped (up)   black
+  // 2 is striped (across)   white
+  // 3 is wrapped    lighter shade of the color
+  // 4 is bomb   color but a darker shade 
    int getSpecial() {
     return special;
   }
@@ -43,21 +43,88 @@ class Candy{
       noStroke();
     fill(245, 180, 100);
     ellipse(x*100 +50, y*100 +50, 50, 80);
-    stroke(0);
-    }
+    
+    if (special == 1) 
+   {
+     stroke(0, 0, 0);
+     strokeWeight(3);
+   }
+   
+   if (special == 2) 
+   {
+     stroke(255, 255, 255);
+     strokeWeight(3);
+   }
+   
+   if (special == 3) 
+   {
+     stroke(255, 140, 0);
+     strokeWeight(3);
+   }
+   
+   if (special == 4) 
+   {
+     stroke(255, 213, 128);
+     strokeWeight(3);
+   }
+  }
 
    if (candyColor.equals("green")) {
       noStroke();
     fill(150, 220, 144);
     square(x*100 +10, y*100 +10, 80);
-    stroke(0);
+if (special == 1) 
+   {
+     stroke(0, 0, 0);
+     strokeWeight(3);
+   }
+   
+   if (special == 2) 
+   {
+     stroke(255, 255, 255);
+     strokeWeight(3);
+   }
+   
+   if (special == 3) 
+   {
+     stroke(144, 238, 144);
+     strokeWeight(3);
+   }
+   
+   if (special == 4) 
+   {
+     stroke(0, 255, 0);
+     strokeWeight(3);
+   }
     }
     
     if (candyColor.equals("blue")) {
        noStroke();
     fill(173, 216, 255);
     ellipse(x*100 +50, y*100 +50, 80, 80);
-    stroke(0);
+if (special == 1) 
+   {
+     stroke(0, 0, 0);
+     strokeWeight(3);
+   }
+   
+   if (special == 2) 
+   {
+     stroke(255, 255, 255);
+     strokeWeight(3);
+   }
+   
+   if (special == 3) 
+   {
+     stroke(173, 216, 230);
+     strokeWeight(3);
+   }
+   
+   if (special == 4) 
+   {
+     stroke(0, 0, 255);
+     strokeWeight(3);
+   }
     }
    
     
@@ -121,8 +188,36 @@ lollipop = createShape(GROUP);
     lollipop.addChild(stick);
     
     if (candyColor.equals("purple")) {
+      pc.noStroke();
+      
+      if (special == 1) 
+   {
+     pc.stroke(0, 0, 0);
+     pc.strokeWeight(3);
+   }
+   
+   if (special == 2) 
+   {
+     pc.stroke(255, 255, 255);
+     pc.strokeWeight(3);
+   }
+   
+   if (special == 3) 
+   {
+     pc.stroke(203, 195, 227);
+     pc.strokeWeight(3);
+   }
+   
+   if (special == 4) 
+   {
+     pc.stroke(48, 25, 52);
+     pc.strokeWeight(3);
+   }
       shape(pc, x*100, y*100);
     }
+    
+    
+   
     
     if (candyColor.equals("red")) {
       shape(gumdrop, x*100, y*100);
@@ -131,6 +226,8 @@ lollipop = createShape(GROUP);
     if (candyColor.equals("yellow")) {
       shape(lollipop, x*100, y*100);
     }
+    
+    
   }
   
 
