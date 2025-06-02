@@ -18,22 +18,22 @@ class CandyBoard{
   }
   
   
-  boolean swap(int x1, int y1, int x2, int y2){
+  int swap(int x1, int y1, int x2, int y2){
     if(swappable(x1,y1,x2,y2) || swappable(x2,y2,x1,y1)){
       Candy temp = board[y1][x1];
       board[y1][x1]=board[y2][x2];
       board[y2][x2]=temp;
-      replace();
-      return true;
+      return replace();
+      
     }
-    return false;
+    return 0;
   }
   
-  boolean remove(int x, int y){
+  int remove(int x, int y){
     int spec = board[y][x].getSpecial();
     String colr = board[y][x].getColor();
+    int total = 0;
     if(spec<4 && swappable(x,y,x,y)){
-      int total = 0;
       int left = -1;
       int up = -1;
       while(left+x > -1 && board[y][x+left].getColor().equals(colr)){
@@ -75,11 +75,13 @@ class CandyBoard{
       if(spec ==1){
         for(int i = 0; i < board.length; i++){
           board[i][x]=null;
+          total++;
         }
       }
       if(spec == 2){
       for(int i = 0; i < board.length; i++){
           board[y][i]=null;
+          total++;
         }
       }
       if(spec == 3){
@@ -98,44 +100,49 @@ class CandyBoard{
         for(int i = left; i < right; i++){
           for(int j = up; j < down; j++){
             board[j][i] = null;
+            total++;
           }
         }
       }
       replace();
-      return true;
+      return total;
     }
     if(spec == 4){
       for(int i = 0; i < board.length; i++){
         for(int j = 0; j < board.length; j++){
           if(board[i][j].getColor().equals(colr)){
             board[i][j]=null;
+            total++;
           }
         }
       }
       replace();
-      return true;
+      return total;
     }
     replace();
-    return false;
+    return total;
   }
   
-  void replace(){
+  int replace(){
+    int total = 0;
     for(int i = 0; i < board.length; i++){
       for(int j = 0; j < board.length; j++){
         if(board[i][j]==null){
           String[] colors = {"red", "orange", "yellow", "green", "blue", "purple"};
           int colr = (int)(Math.random() * 6);
           board[i][j]= new Candy(colors[colr], -1, 5);
+          total++;
         }
       }
     }
     for(int i = 0; i < board.length; i++){
       for(int j = 0; j < board.length; j++){
        if(swappable(i,j,i,j)){
-         remove(i,j);
+         total+=remove(i,j);
        } 
       }
     }
+    return total;
   }
 
   boolean swappable(int x1, int y1, int x, int y){

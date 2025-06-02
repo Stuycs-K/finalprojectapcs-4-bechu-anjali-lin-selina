@@ -4,18 +4,6 @@ int[] selected1 = {-1, -1};
 int[] selected2 = {-1,-1};
 
 void draw(){
-  //fill(202);
-  //for(int i= 0; i <=900;i+=100){
-  //    line(0,i,900,i);
-  //    line(i,0,i,900);
-  //  }
-  
- 
-    
-    
-    
-    
-     
     
    for(int i = 0; i < 9; i++){
       for(int j = 0; j < 9; j++){
@@ -97,8 +85,14 @@ void mouseClicked(){
 
 void keyPressed(){
   if(key == ' ' && selected1[0] != -1 && selected1[1] !=-1 && selected2[0] != -1 && selected2[1]!=-1){
-    game.swap(selected1[0],selected1[1],selected2[0],selected2[1]);
-        fill(150);
+    int spaces = game.swap(selected1[0],selected1[1],selected2[0],selected2[1]);
+    int prev = scores.getScore();
+    scores.increaseScore(spaces);
+    scores.progressGoal(spaces);
+    if(scores.getScore()>prev){
+      scores.decreaseMoves();    
+    }
+    fill(150);
     rect(0,0,900,900);
     stroke(0);
     for(int i= 0; i <=900;i+=100){

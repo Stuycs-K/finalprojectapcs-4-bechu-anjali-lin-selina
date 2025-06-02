@@ -35,13 +35,30 @@ class Tracker {
   */
   
   void increaseScore(int s) {
-    score += s;
+    if(s > 5){
+      score+= 150;
+    }else if(s < 6){
+      score+= s* 10;
+    }else if(s < 5){
+      score+= s* 8;
+    }else if(s < 4){
+      score += s * 5;
+    }
   }
   
   
   void progressGoal (int g) {
-   while (goal>=0) {
-     goal -= g;
+   if (goal>=0) {
+     if(g > 5){
+      goal -= 150;
+    }else if(g < 6){
+      goal -= g * 10;
+    }else if(g < 5){
+      goal -= g * 8;
+    }else if(g < 4){
+      goal -= g * 5;
+    }
+     
    }
   }
   
