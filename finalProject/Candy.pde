@@ -40,18 +40,24 @@ class Candy{
 
   void display(int x, int y) {
     if (candyColor.equals("orange")) {
+      noStroke();
     fill(245, 180, 100);
     ellipse(x*100 +50, y*100 +50, 50, 80);
+    stroke(0);
     }
 
    if (candyColor.equals("green")) {
+      noStroke();
     fill(150, 220, 144);
     square(x*100 +10, y*100 +10, 80);
+    stroke(0);
     }
     
     if (candyColor.equals("blue")) {
+       noStroke();
     fill(173, 216, 255);
     ellipse(x*100 +50, y*100 +50, 80, 80);
+    stroke(0);
     }
    
     

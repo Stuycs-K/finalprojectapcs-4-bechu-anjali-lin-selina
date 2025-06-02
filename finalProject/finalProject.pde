@@ -9,6 +9,14 @@ void draw(){
   //    line(0,i,900,i);
   //    line(i,0,i,900);
   //  }
+  
+ 
+    
+    
+    
+    
+     
+    
    for(int i = 0; i < 9; i++){
       for(int j = 0; j < 9; j++){
         Candy temp = game.getBoard()[j][i];
@@ -16,10 +24,13 @@ void draw(){
       }
     }
     
+    
+    
     drawScores();
     mousePressed();
-      keyPressed();
     
+      keyPressed();
+
     if (scores.win() || scores.gameOver()) {
       display();
     }
@@ -87,15 +98,21 @@ void mouseClicked(){
 void keyPressed(){
   if(key == ' ' && selected1[0] != -1 && selected1[1] !=-1 && selected2[0] != -1 && selected2[1]!=-1){
     game.swap(selected1[0],selected1[1],selected2[0],selected2[1]);
+        fill(150);
+    rect(0,0,900,900);
     stroke(0);
-    line(selected1[0]*100, selected1[1] * 100, (selected1[0]+1) *100, selected1[1]*100);
-    line(selected1[0]*100, selected1[1] * 100, selected1[0] *100, (selected1[1]+1)*100);
-    line((selected1[0]+1)*100, selected1[1] * 100, (selected1[0]+1) *100, (selected1[1]+1)*100);
-    line(selected1[0]*100, (selected1[1]+1) * 100, (selected1[0]+1) *100, (selected1[1]+1)*100);
-    line(selected2[0]*100, selected2[1] * 100, (selected2[0]+1) *100, selected2[1]*100);
-    line(selected2[0]*100, selected2[1] * 100, selected2[0] *100, (selected2[1]+1)*100);
-    line((selected2[0]+1)*100, selected2[1] * 100, (selected2[0]+1) *100, (selected2[1]+1)*100);
-    line(selected2[0]*100, (selected2[1]+1) * 100, (selected2[0]+1) *100, (selected2[1]+1)*100);
+    for(int i= 0; i <=900;i+=100){
+      line(0,i,900,i);
+      line(i,0,i,900);
+    }
+    //line(selected1[0]*100, selected1[1] * 100, (selected1[0]+1) *100, selected1[1]*100);
+    //line(selected1[0]*100, selected1[1] * 100, selected1[0] *100, (selected1[1]+1)*100);
+    //line((selected1[0]+1)*100, selected1[1] * 100, (selected1[0]+1) *100, (selected1[1]+1)*100);
+    //line(selected1[0]*100, (selected1[1]+1) * 100, (selected1[0]+1) *100, (selected1[1]+1)*100);
+    //line(selected2[0]*100, selected2[1] * 100, (selected2[0]+1) *100, selected2[1]*100);
+    //line(selected2[0]*100, selected2[1] * 100, selected2[0] *100, (selected2[1]+1)*100);
+    //line((selected2[0]+1)*100, selected2[1] * 100, (selected2[0]+1) *100, (selected2[1]+1)*100);
+    //line(selected2[0]*100, (selected2[1]+1) * 100, (selected2[0]+1) *100, (selected2[1]+1)*100);
 
     selected1[0] = -1;
     selected1[1] = -1;
@@ -108,6 +125,8 @@ void keyPressed(){
 
  void setup() {
    size(1200, 900);
+   fill(150);
+   rect(0,0,900,900);
     
     game = new CandyBoard();
     for(int i = 0; i < 9; i++){
