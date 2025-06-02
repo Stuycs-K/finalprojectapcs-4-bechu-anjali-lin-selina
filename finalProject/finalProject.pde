@@ -12,6 +12,13 @@ void draw(){
         temp.display(i,j);
       }
     }
+    
+    
+    drawScores();
+    
+    if (scores.win() || scores.gameOver()) {
+      gameEnd();
+    }
 }
 
 void mouseClicked(){
@@ -71,7 +78,10 @@ void mouseClicked(){
 
 void keyPressed(){
   if(key == ' ' && selected1[0] != -1 && selected1[1] !=-1 && selected2[0] != -1 && selected2[1]!=-1){
-    game.swap(selected1[0],selected1[1],selected2[0],selected2[1]);
+    if (game.swap(selected1[0],selected1[1],selected2[0],selected2[1])){
+      scores.decreaseMoves();
+    }
+    
     stroke(0);
     line(selected1[0]*100, selected1[1] * 100, (selected1[0]+1) *100, selected1[1]*100);
     line(selected1[0]*100, selected1[1] * 100, selected1[0] *100, (selected1[1]+1)*100);
@@ -105,6 +115,10 @@ void keyPressed(){
       line(0,i,900,i);
       line(i,0,i,900);
     }
+ }
+ 
+ 
+ void drawScores() {
     scores = new Tracker(30,3000);
     textSize(40);
     fill(0);
@@ -123,16 +137,11 @@ void keyPressed(){
     rect(985,750,115,75);
     fill(0);
     text(scores.getGoal() + "", 1000,800);
- }
- 
- void display() {
-   
-   
-   
-   
-   
-   
-   //code for when the game ends
+}
+
+
+
+ void gameEnd() {
    if (scores.win() || scores.gameOver()) {
      fill(255);
      rect(0, 0, 900, 900);
@@ -142,8 +151,5 @@ void keyPressed(){
      } else {
        text("Game Over!", 950, 200);
      }
-   }
-     
-     
-     
+   }  
  }
