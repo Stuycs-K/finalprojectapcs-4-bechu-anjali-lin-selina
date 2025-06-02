@@ -1,7 +1,5 @@
-PShape purpleCandy;
-PShape purpleCandy2;
-PShape circle;
-PShape pc;
+PShape purpleCandy, purpleCandy2, circle, pc;
+PShape lollipop, stick, circle2;
 PShape gumdrop, top, bottom;
 
 class Candy{
@@ -105,12 +103,27 @@ class Candy{
     
     gumdrop.addChild(bottom);
     
+lollipop = createShape(GROUP);
+     circle2 = createShape(ELLIPSE, 50, 50, 30, 30);
+    circle2.setFill(color(255, 130, 150));
+    circle2.setStroke(false);
+    lollipop.addChild(circle2);
+    
+    stick = createShape(RECT, 48, 55, 5, 30, 10);
+    stick.setFill(color(255, 130, 150));
+    stick.setStroke(false);
+    lollipop.addChild(stick);
+    
     if (candyColor.equals("purple")) {
       shape(pc, x*100, y*100);
     }
     
     if (candyColor.equals("red")) {
       shape(gumdrop, x*100, y*100);
+    }
+    
+    if (candyColor.equals("yellow")) {
+      shape(lollipop, x*100, y*100);
     }
   }
   

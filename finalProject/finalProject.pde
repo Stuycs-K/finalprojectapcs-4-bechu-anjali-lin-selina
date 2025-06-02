@@ -3,23 +3,6 @@ Tracker scores;
 int[] selected1 = {-1, -1};
 int[] selected2 = {-1,-1};
 
- void setup() {
-   size(1200, 900);
-    
-    game = new CandyBoard();
-    for(int i = 0; i < 9; i++){
-      for(int j = 0; j < 9; j++){
-        Candy temp = game.getBoard()[j][i];
-        temp.display(i,j);
-      }
-    }
-    for(int i= 0; i <=900;i+=100){
-      line(0,i,900,i);
-      line(i,0,i,900);
-    }
- }
- 
- 
 void draw(){
   mousePressed();
   keyPressed();
@@ -28,13 +11,6 @@ void draw(){
         Candy temp = game.getBoard()[j][i];
         temp.display(i,j);
       }
-    }
-    
-    
-    drawScores();
-    
-    if (scores.win() || scores.gameOver()) {
-      gameEnd();
     }
 }
 
@@ -95,10 +71,7 @@ void mouseClicked(){
 
 void keyPressed(){
   if(key == ' ' && selected1[0] != -1 && selected1[1] !=-1 && selected2[0] != -1 && selected2[1]!=-1){
-    if (game.swap(selected1[0],selected1[1],selected2[0],selected2[1])){
-      scores.decreaseMoves();
-    }
-    
+    game.swap(selected1[0],selected1[1],selected2[0],selected2[1]);
     stroke(0);
     line(selected1[0]*100, selected1[1] * 100, (selected1[0]+1) *100, selected1[1]*100);
     line(selected1[0]*100, selected1[1] * 100, selected1[0] *100, (selected1[1]+1)*100);
@@ -116,9 +89,22 @@ void keyPressed(){
 
   }
 }
- 
- 
- void drawScores() {
+
+
+ void setup() {
+   size(1200, 900);
+    
+    game = new CandyBoard();
+    for(int i = 0; i < 9; i++){
+      for(int j = 0; j < 9; j++){
+        Candy temp = game.getBoard()[j][i];
+        temp.display(i,j);
+      }
+    }
+    for(int i= 0; i <=900;i+=100){
+      line(0,i,900,i);
+      line(i,0,i,900);
+    }
     scores = new Tracker(30,3000);
     textSize(40);
     fill(0);
@@ -137,11 +123,16 @@ void keyPressed(){
     rect(985,750,115,75);
     fill(0);
     text(scores.getGoal() + "", 1000,800);
-}
-
-
-
- void gameEnd() {
+ }
+ 
+ void display() {
+   
+   
+   
+   
+   
+   
+   //code for when the game ends
    if (scores.win() || scores.gameOver()) {
      fill(255);
      rect(0, 0, 900, 900);
@@ -151,5 +142,8 @@ void keyPressed(){
      } else {
        text("Game Over!", 950, 200);
      }
-   }  
+   }
+     
+     
+     
  }
