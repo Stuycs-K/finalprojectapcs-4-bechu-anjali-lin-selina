@@ -106,7 +106,12 @@ void keyPressed(){
       line(i,0,i,900);
     }
     scores = new Tracker(30,3000);
-    textSize(40);
+
+ }
+ 
+ 
+ void drawScores {
+   textSize(40);
     fill(0);
     text("Moves Left: ", 950, 100);
     fill(255);
@@ -124,6 +129,8 @@ void keyPressed(){
     fill(0);
     text(scores.getGoal() + "", 1000,800);
  }
+ 
+ 
  
  void display() {
    
