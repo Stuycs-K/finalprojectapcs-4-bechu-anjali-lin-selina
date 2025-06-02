@@ -185,10 +185,10 @@ class CandyBoard{
     }
     
     boolean swappable2 = false;
-    if(board[y][x-1].getColor().equals(thisColor) && board[y][x+1].getColor().equals(thisColor)){
+    if(x-1>-1 && x+1<board.length  && board[y][x-1].getColor().equals(thisColor) && board[y][x+1].getColor().equals(thisColor)){
       swappable2 = true;
     }
-    if(board[y-1][x].getColor().equals(thisColor) && board[y+1][x].getColor().equals(thisColor)){
+    if(y-1>-1 && y+1<board.length  && board[y-1][x].getColor().equals(thisColor) && board[y+1][x].getColor().equals(thisColor)){
       swappable2 = true;
     }
     
