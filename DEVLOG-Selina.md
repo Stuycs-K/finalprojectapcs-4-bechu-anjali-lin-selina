@@ -33,3 +33,6 @@ One class period, worked on setup and display.
 ### 2025-05-29-25 - More in mousePressed + minor changes to CandyBoard
 Half hour at home, fixed stack overflow error in CandyBoard, worked on displaying selected space in mousePressed.
 One class period, displaying selected spaces, inputting selected spaces in game.
+
+### 2025-06-01/02-25 - Updating displays of board and scores
+Evening at home, changed board methods to return ints to update score with them, changed draw and keyPressed to update current board.
