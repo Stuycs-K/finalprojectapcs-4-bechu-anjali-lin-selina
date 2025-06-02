@@ -167,9 +167,9 @@ void keyPressed(){
      rect(0, 0, 900, 900);
      textSize(200);
      if (scores.win()) {
-       text("You Win!", 950, 200);
+       text("You Win!", 200, 200);
      } else {
-       text("Game Over!", 950, 200);
+       text("Game Over!", 200, 200);
      }
    }   
  }
