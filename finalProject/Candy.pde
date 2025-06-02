@@ -216,14 +216,62 @@ lollipop = createShape(GROUP);
       shape(pc, x*100, y*100);
     }
     
-    
-   
-    
+ 
     if (candyColor.equals("red")) {
-      shape(gumdrop, x*100, y*100);
+      gumdrop.noStroke();
+      if (special == 1) 
+   {
+     gumdrop.stroke(0, 0, 0);
+gumdrop.strokeWeight(3);
+   }
+   
+   if (special == 2) 
+   {
+     gumdrop.stroke(255, 255, 255);
+     gumdrop.strokeWeight(3);
+   }
+   
+   if (special == 3) 
+   {
+     gumdrop.stroke(203, 195, 227);
+     gumdrop.strokeWeight(3);
+   }
+   
+   if (special == 4) 
+   {
+     gumdrop.stroke(48, 25, 52);
+     gumdrop.strokeWeight(3);
+   }
+         shape(gumdrop, x*100, y*100);
     }
     
+
     if (candyColor.equals("yellow")) {
+       lollipop.noStroke();
+      if (special == 1) 
+   {
+     lollipop.stroke(0, 0, 0);
+     lollipop.strokeWeight(3);
+   }
+   
+   if (special == 2) 
+   {
+     lollipop.stroke(255, 255, 255);
+     lollipop.strokeWeight(3);
+   }
+   
+   if (special == 3) 
+   {
+     lollipop.stroke(203, 195, 227);
+     lollipop.strokeWeight(3);
+   }
+   
+   if (special == 4) 
+   {
+     lollipop.stroke(48, 25, 52);
+     lollipop.strokeWeight(3);
+   }
+     
       shape(lollipop, x*100, y*100);
     }
     
