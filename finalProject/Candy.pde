@@ -40,17 +40,17 @@ class Candy{
 
   void display(int x, int y) {
     if (candyColor.equals("orange")) {
-    fill(255, 165, 0);
+    fill(245, 180, 100);
     ellipse(x*100 +50, y*100 +50, 50, 80);
     }
 
    if (candyColor.equals("green")) {
-    fill(0, 255, 0);
+    fill(150, 220, 144);
     square(x*100 +10, y*100 +10, 80);
     }
     
     if (candyColor.equals("blue")) {
-    fill(0, 0, 255);
+    fill(173, 216, 255);
     ellipse(x*100 +50, y*100 +50, 80, 80);
     }
    
@@ -105,12 +105,12 @@ class Candy{
     
 lollipop = createShape(GROUP);
      circle2 = createShape(ELLIPSE, 50, 50, 30, 30);
-    circle2.setFill(color(255, 130, 150));
+    circle2.setFill(color(255, 255, 160));
     circle2.setStroke(false);
     lollipop.addChild(circle2);
     
     stick = createShape(RECT, 48, 55, 5, 30, 10);
-    stick.setFill(color(255, 130, 150));
+    stick.setFill(color(255, 255, 160));
     stick.setStroke(false);
     lollipop.addChild(stick);
     
