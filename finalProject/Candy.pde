@@ -275,7 +275,8 @@ gumdrop.strokeWeight(3);
       shape(lollipop, x*100, y*100);
     }
     
-    
+    stroke(0);
+    strokeWeight(1);
   }
   
 

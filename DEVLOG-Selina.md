@@ -39,3 +39,6 @@ Evening at home, changed board methods to return ints to update score with them,
 
 ### 2025-06-02-25 - Fixing errors in remove and sweap
 One class period, testing and fixing errors in swap and remove that caused inaccurate changes to board.
+
+### 2025-06-03-25 - Fixing errors in displaying board
+Half hour at home, fixing errors with board lines and scoreboard.
