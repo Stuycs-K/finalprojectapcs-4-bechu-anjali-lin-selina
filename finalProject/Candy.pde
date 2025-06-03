@@ -41,8 +41,7 @@ class Candy{
   void display(int x, int y) {
     if (candyColor.equals("orange")) {
       noStroke();
-    fill(245, 180, 100);
-    ellipse(x*100 +50, y*100 +50, 50, 80);
+    
     
     if (special == 1) 
    {
@@ -67,12 +66,14 @@ class Candy{
      stroke(255, 213, 128);
      strokeWeight(3);
    }
+   
+   fill(245, 180, 100);
+    ellipse(x*100 +50, y*100 +50, 50, 80);
   }
 
    if (candyColor.equals("green")) {
       noStroke();
-    fill(150, 220, 144);
-    square(x*100 +10, y*100 +10, 80);
+   
 if (special == 1) 
    {
      stroke(0, 0, 0);
@@ -96,12 +97,13 @@ if (special == 1)
      stroke(0, 255, 0);
      strokeWeight(3);
    }
+    fill(150, 220, 144);
+    square(x*100 +10, y*100 +10, 80);
     }
     
     if (candyColor.equals("blue")) {
        noStroke();
-    fill(173, 216, 255);
-    ellipse(x*100 +50, y*100 +50, 80, 80);
+    
 if (special == 1) 
    {
      stroke(0, 0, 0);
@@ -125,6 +127,8 @@ if (special == 1)
      stroke(0, 0, 255);
      strokeWeight(3);
    }
+   fill(173, 216, 255);
+    ellipse(x*100 +50, y*100 +50, 80, 80);
     }
    
     
@@ -188,29 +192,29 @@ lollipop = createShape(GROUP);
     lollipop.addChild(stick);
     
     if (candyColor.equals("purple")) {
-      pc.noStroke();
+      pc.setStroke(false);
       
       if (special == 1) 
    {
-     pc.stroke(0, 0, 0);
+     pc.setStroke(color(0, 0, 0));
      pc.strokeWeight(3);
    }
    
    if (special == 2) 
    {
-     pc.stroke(255, 255, 255);
+     pc.setStroke(color(255, 255, 255));
      pc.strokeWeight(3);
    }
    
    if (special == 3) 
    {
-     pc.stroke(203, 195, 227);
+     pc.setStroke(color(203, 195, 227));
      pc.strokeWeight(3);
    }
    
    if (special == 4) 
    {
-     pc.stroke(48, 25, 52);
+     pc.setStroke(color(48, 25, 52));
      pc.strokeWeight(3);
    }
       shape(pc, x*100, y*100);
@@ -218,28 +222,28 @@ lollipop = createShape(GROUP);
     
  
     if (candyColor.equals("red")) {
-      gumdrop.noStroke();
+      gumdrop.setStroke(false);
       if (special == 1) 
    {
-     gumdrop.stroke(0, 0, 0);
+     gumdrop.setStroke(color(0, 0, 0));
 gumdrop.strokeWeight(3);
    }
    
    if (special == 2) 
    {
-     gumdrop.stroke(255, 255, 255);
+     gumdrop.setStroke(color(255, 255, 255));
      gumdrop.strokeWeight(3);
    }
    
    if (special == 3) 
    {
-     gumdrop.stroke(203, 195, 227);
+     gumdrop.setStroke(color(203, 195, 227));
      gumdrop.strokeWeight(3);
    }
    
    if (special == 4) 
    {
-     gumdrop.stroke(48, 25, 52);
+     gumdrop.setStroke(color(48, 25, 52));
      gumdrop.strokeWeight(3);
    }
          shape(gumdrop, x*100, y*100);
@@ -247,28 +251,28 @@ gumdrop.strokeWeight(3);
     
 
     if (candyColor.equals("yellow")) {
-       lollipop.noStroke();
+       lollipop.setStroke(false);
       if (special == 1) 
    {
-     lollipop.stroke(0, 0, 0);
+     lollipop.setStroke(color(0, 0, 0));
      lollipop.strokeWeight(3);
    }
    
    if (special == 2) 
    {
-     lollipop.stroke(255, 255, 255);
+     lollipop.setStroke(color(255, 255, 255));
      lollipop.strokeWeight(3);
    }
    
    if (special == 3) 
    {
-     lollipop.stroke(203, 195, 227);
+     lollipop.setStroke(color(203, 195, 227));
      lollipop.strokeWeight(3);
    }
    
    if (special == 4) 
    {
-     lollipop.stroke(48, 25, 52);
+     lollipop.setStroke(color(48, 25, 52));
      lollipop.strokeWeight(3);
    }
      
