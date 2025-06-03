@@ -42,4 +42,4 @@ One class period, testing and fixing errors in swap and remove that caused inacc
 
 ### 2025-06-03-25 - Fixing errors in displaying board
 Half hour at home, fixing errors with board lines and scoreboard.
-One class period, made replace move down candies.
+One class period, made replace move down candies, updated win condition and win/lose screen.
