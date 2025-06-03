@@ -63,10 +63,10 @@ class Tracker {
   }
   
   boolean win() {
-    return goal == 0;
+    return goal <= 0;
   }
   
   boolean gameOver() {
-    return (goal == 0) || (moves == 0);
+    return win() || (moves == 0);
   }
 }
