@@ -24,26 +24,25 @@ class CandyBoard{
       board[y1][x1]=board[y2][x2];
       board[y2][x2]=temp;
       
-      float candyX1 = (x2 - x1) * 100; 
-      float candyY1 = (y2 - y1) * 100;
-      float candyX2 = (x1 - x2) * 100;
-      float candyY2 = (y1 - y2) * 100;
+      int candyX1 = (x2 - x1) * 100; 
+      int candyY1 = (y2 - y1) * 100;
+      int candyX2 = (x1 - x2) * 100;
+      int candyY2 = (y1 - y2) * 100;
       
-      float speed = 10;
+      int speed = 10;
       
-      float moveX1 = x1 * 100;
-      float moveY1 = y1 * 100;
-      float moveX2 = x2 * 100;
-      float moveY2 = y2 * 100;
+      int moveX1 = x1 * 100;
+      int moveY1 = y1 * 100;
+      int moveX2 = x2 * 100;
+      int moveY2 = y2 * 100;
       
-      while (abs(moveX1 - (x2 * 100)) > 1 || abs(moveY1 - (y2 * 100)) > 1 || abs(moveX2 - (x1 * 100)) > 1 || abs(moveY2 - (y1 * 100)) > 1) {
+      while (abs(candyX1 - (x2 * 100)) > 1 || abs(candyY1 - (y2 * 100)) > 1 || abs(candyX2 - (x1 * 100)) > 1 || abs(candyY2 - (y1 * 100)) > 1) {
         moveX1 += candyX1 / speed;
         moveY1 += candyY1 / speed;
         moveX2 += candyX2 / speed;
         moveY2 += candyY2 / speed;
         
-        redrawBoard();
-        delay(100);
+        delay(15);
       }
       return remove(x1,y1) + remove(x2,y2) + replace();
     }
@@ -145,21 +144,20 @@ class CandyBoard{
   
   int replace(){
     int total = 0;
-    for(int i = 0; i < board.length; i++){
+    /*for(int i = 0; i < board.length; i++){
       for(int j = board.length - 1; j >-1; j--){
         int up = 0;
         if(board[j][i]==null){
          while(j-up > -1 && board[j-up][i] == null){
            up++;
          }
-          if(j-up>-1){
-           board[j][i]= board[j-up][i];
-           board[j-up][i]=null;
-         }
        } 
-
+       if(j-up>-1){
+         board[j][i]= board[j-up][i];
+         board[j-up][i]=null;
+       }
       }
-    } 
+    } */
     for(int i = 0; i < board.length; i++){
       for(int j = 0; j < board.length; j++){
         if(board[i][j]==null){
@@ -251,15 +249,4 @@ class CandyBoard{
     return swappable2;
   }
 
-
-
-void redrawBoard() {
-     for(int i = 0; i < 9; i++){
-      for(int j = 0; j < 9; j++){
-        Candy temp = game.getBoard()[j][i];
-        temp.display(i,j);
-      }
-    }
-    
-}
 }

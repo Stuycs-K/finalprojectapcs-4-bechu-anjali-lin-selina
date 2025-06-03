@@ -42,7 +42,7 @@ class Candy{
     if (candyColor.equals("orange")) {
       noStroke();
     fill(245, 180, 100);
-    ellipse(x*100 +50, y*100 +50, 50, 80);
+    ellipse(x*100 +50, y*100 +50, 40, 60);
     
     if (special == 1) 
    {
@@ -72,7 +72,7 @@ class Candy{
    if (candyColor.equals("green")) {
       noStroke();
     fill(150, 220, 144);
-    square(x*100 +10, y*100 +10, 80);
+    square(x*100 +20, y*100 +20, 60);
 if (special == 1) 
    {
      stroke(0, 0, 0);
@@ -101,7 +101,7 @@ if (special == 1)
     if (candyColor.equals("blue")) {
        noStroke();
     fill(173, 216, 255);
-    ellipse(x*100 +50, y*100 +50, 80, 80);
+    ellipse(x*100 +50, y*100 +50, 60, 60);
 if (special == 1) 
    {
      stroke(0, 0, 0);
