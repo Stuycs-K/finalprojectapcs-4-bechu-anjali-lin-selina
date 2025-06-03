@@ -23,9 +23,9 @@ class CandyBoard{
       Candy temp = board[y1][x1];
       board[y1][x1]=board[y2][x2];
       board[y2][x2]=temp;
-      remove(x1,y1);
-      remove(x2,y2);
-      return replace();
+      return remove(x1,y1) + remove(x2,y2) + replace();
+      
+      
       
     }
     return 0;
@@ -34,7 +34,7 @@ class CandyBoard{
   int remove(int x, int y){
     int spec = board[y][x].getSpecial();
     String colr = board[y][x].getColor();
-    int total = 1;
+    int total = 0;
     if(spec<4 && swappable(x,y,x,y)){
       int left = -1;
       int up = -1;
@@ -106,8 +106,8 @@ class CandyBoard{
           }
         }
       }
-      replace();
-      return total;
+      
+      return total +replace();
     }
     if(spec == 4){
       for(int i = 0; i < board.length; i++){
@@ -125,7 +125,7 @@ class CandyBoard{
   }
   
   int replace(){
-    int total = 1;
+    int total = 0;
     /*for(int i = 0; i < board.length; i++){
       for(int j = board.length - 1; j >-1; j--){
         int up = 0;

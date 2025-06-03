@@ -85,6 +85,11 @@ void mouseClicked(){
 
 void keyPressed(){
   if(key == ' ' && selected1[0] != -1 && selected1[1] !=-1 && selected2[0] != -1 && selected2[1]!=-1){
+    //Candy temp = game.getBoard()[selected1[1]][selected1[0]];
+    //Candy temp2 = game.getBoard()[selected2[1]][selected2[0]];
+    //temp.display(selected2[0],selected2[1]);
+    //temp2.display(selected1[0],selected1[1]);
+    delay(2000);
     int spaces = game.swap(selected1[0],selected1[1],selected2[0],selected2[1]);
     int prev = scores.getScore();
     scores.increaseScore(spaces);
