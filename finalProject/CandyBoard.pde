@@ -23,10 +23,23 @@ class CandyBoard{
       Candy temp = board[y1][x1];
       board[y1][x1]=board[y2][x2];
       board[y2][x2]=temp;
+      
+      //int candyX1 = (x2 - x1) * 100; 
+      //int candyY1 = (y2 - y1) * 100;
+      //int candyX2 = (x1 - x2) * 100;
+      //int candyY2 = (y1 - y2) * 100;
+      
+      //int speed = 10;
+      
+      //while (abs(candyX1 - (x2 * 100)) > 1 || abs(candyY1 - (y2 * 100)) > 1 || abs(candyX2 - (x1 * 100)) > 1 || abs(candyY2 - (y1 * 100)) > 1) {
+      //  candyX1 += candyX1 / speed;
+      //  candyY1 += candyY1 / speed;
+      //  candyX2 += candyX2 / speed;
+      //  candyY2 += candyY2 / speed;
+        
+      //  delay(15);
+      //}
       return remove(x1,y1) + remove(x2,y2) + replace();
-      
-      
-      
     }
     return 0;
   }

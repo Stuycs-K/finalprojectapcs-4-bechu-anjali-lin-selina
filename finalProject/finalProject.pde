@@ -95,7 +95,7 @@ void keyPressed(){
     scores.increaseScore(spaces);
     scores.progressGoal(spaces);
     if(scores.getScore()>prev){
-      scores.decreaseMoves();    
+      scores.decreaseMoves();
     }
     fill(150);
     rect(0,0,900,900);
@@ -177,5 +177,5 @@ void keyPressed(){
      } else {
        text("Game Over!", 200, 200);
      }
-   }   
+   }  
  }
