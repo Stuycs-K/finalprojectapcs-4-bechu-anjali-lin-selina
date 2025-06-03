@@ -139,20 +139,21 @@ class CandyBoard{
   
   int replace(){
     int total = 0;
-    /*for(int i = 0; i < board.length; i++){
+    for(int i = 0; i < board.length; i++){
       for(int j = board.length - 1; j >-1; j--){
         int up = 0;
         if(board[j][i]==null){
          while(j-up > -1 && board[j-up][i] == null){
            up++;
          }
+          if(j-up>-1){
+           board[j][i]= board[j-up][i];
+           board[j-up][i]=null;
+         }
        } 
-       if(j-up>-1){
-         board[j][i]= board[j-up][i];
-         board[j-up][i]=null;
-       }
+
       }
-    } */
+    } 
     for(int i = 0; i < board.length; i++){
       for(int j = 0; j < board.length; j++){
         if(board[i][j]==null){
