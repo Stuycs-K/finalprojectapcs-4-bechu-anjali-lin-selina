@@ -154,9 +154,9 @@ void keyPressed(){
     text(scores.getMoves() + "", 1025,200);
     text("Current Score: ", 925, 400);
     fill(255);
-    rect(980,450,110,75);
+    rect(985,450,115,75);
     fill(0);
-    text(scores.getScore() + "", 1025,500);
+    text(scores.getScore() + "", 1000,500);
     text("Goal Score: ", 950, 700);
     fill(255);
     rect(985,750,115,75);
@@ -169,13 +169,19 @@ void keyPressed(){
  void display() {
    //code for when the game ends
    if (scores.win() || scores.gameOver()) {
-     fill(255);
-     rect(0, 0, 900, 900);
-     textSize(200);
+     
      if (scores.win()) {
-       text("You Win!", 200, 200);
+       fill(0,255,0);
+       rect(0, 0, 1200, 900);
+       textSize(200);
+       fill(0);
+       text("You Win!", 200, 450);
      } else {
-       text("Game Over!", 200, 200);
+       fill(255,0,0);
+       rect(0, 0, 1200, 900);
+       textSize(200);
+       fill(0);
+       text("Game Over!", 120, 450);
      }
    }  
  }
