@@ -26,4 +26,10 @@ Creating new shapes for the candies using pshape (for more unique shapes for pur
 Finished making the purple candy and finished creating the gumdrop candy
 
 ### 2025-05-30
-finished creating the final candy adn fixed the orientation of the prior ones on the board
+finished creating the final candy and fixed the orientation of the prior ones on the board
+
+### 2025-05-31
+added the yellow lollipop after I forgot to save and commit the code + tried to fix the board because with every swap the candies overlapped
+
+### 2025-06-02
+Started to write the code to animate the swap + added special outlines to the candy to classify the type of special they are + tried to debug the board because we broke the code
