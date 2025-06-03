@@ -41,7 +41,7 @@ class Candy{
   void display(int x, int y) {
     if (candyColor.equals("orange")) {
       noStroke();
-    
+
     
     if (special == 1) 
    {
@@ -73,7 +73,7 @@ class Candy{
 
    if (candyColor.equals("green")) {
       noStroke();
-   
+
 if (special == 1) 
    {
      stroke(0, 0, 0);
@@ -103,7 +103,7 @@ if (special == 1)
     
     if (candyColor.equals("blue")) {
        noStroke();
-    
+
 if (special == 1) 
    {
      stroke(0, 0, 0);

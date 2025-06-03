@@ -24,21 +24,27 @@ class CandyBoard{
       board[y1][x1]=board[y2][x2];
       board[y2][x2]=temp;
       
-      //int candyX1 = (x2 - x1) * 100; 
-      //int candyY1 = (y2 - y1) * 100;
-      //int candyX2 = (x1 - x2) * 100;
-      //int candyY2 = (y1 - y2) * 100;
+      float candyX1 = (x2 - x1) * 100; 
+      float candyY1 = (y2 - y1) * 100;
+      float candyX2 = (x1 - x2) * 100;
+      float candyY2 = (y1 - y2) * 100;
       
-      //int speed = 10;
+      float speed = 10;
       
-      //while (abs(candyX1 - (x2 * 100)) > 1 || abs(candyY1 - (y2 * 100)) > 1 || abs(candyX2 - (x1 * 100)) > 1 || abs(candyY2 - (y1 * 100)) > 1) {
-      //  candyX1 += candyX1 / speed;
-      //  candyY1 += candyY1 / speed;
-      //  candyX2 += candyX2 / speed;
-      //  candyY2 += candyY2 / speed;
+      float moveX1 = x1 * 100;
+      float moveY1 = y1 * 100;
+      float moveX2 = x2 * 100;
+      float moveY2 = y2 * 100;
+      
+      while (abs(moveX1 - (x2 * 100)) > 1 || abs(moveY1 - (y2 * 100)) > 1 || abs(moveX2 - (x1 * 100)) > 1 || abs(moveY2 - (y1 * 100)) > 1) {
+        moveX1 += candyX1 / speed;
+        moveY1 += candyY1 / speed;
+        moveX2 += candyX2 / speed;
+        moveY2 += candyY2 / speed;
         
-      //  delay(15);
-      //}
+        redrawBoard();
+        delay(100);
+      }
       return remove(x1,y1) + remove(x2,y2) + replace();
     }
     return 0;
@@ -245,4 +251,15 @@ class CandyBoard{
     return swappable2;
   }
 
+
+
+void redrawBoard() {
+     for(int i = 0; i < 9; i++){
+      for(int j = 0; j < 9; j++){
+        Candy temp = game.getBoard()[j][i];
+        temp.display(i,j);
+      }
+    }
+    
+}
 }
