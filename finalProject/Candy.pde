@@ -159,6 +159,7 @@ if (special == 1)
     pc.addChild(purpleCandy);
     pc.addChild(purpleCandy2);
     pc.addChild(circle);
+
     
     
     gumdrop = createShape(GROUP);
