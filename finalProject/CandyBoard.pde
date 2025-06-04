@@ -62,17 +62,6 @@ class CandyBoard{
       int up = -1;
       int right = 1;
       int down = 1;
-      while(left+x > -1 && board[y][x+left] != null && board[y][x+left].getColor().equals(colr)){
-        board[y][x+left]=null;
-        left--;
-        total++;
-      }
-
-      while(right+x<board[0].length && board[y][x+right] != null && board[y][x+right].getColor().equals(colr)){
-        board[y][x+right]=null;
-        right++;
-        total++;
-      }
       while(up+y > -1 && board[y+up][x] != null && board[y+up][x].getColor().equals(colr)){
         board[y+up][x]=null;
         up--;
@@ -84,6 +73,18 @@ class CandyBoard{
         down++;
         total++;
       }
+      while(left+x > -1 && board[y][x+left] != null && board[y][x+left].getColor().equals(colr)){
+        board[y][x+left]=null;
+        left--;
+        total++;
+      }
+
+      while(right+x<board[0].length && board[y][x+right] != null && board[y][x+right].getColor().equals(colr)){
+        board[y][x+right]=null;
+        right++;
+        total++;
+      }
+      
       if(spec==-1){
         if(total == 2){
           board[y][x] = null;
