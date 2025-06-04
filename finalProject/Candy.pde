@@ -192,8 +192,12 @@ lollipop = createShape(GROUP);
     lollipop.addChild(stick);
     
     if (candyColor.equals("purple")) {
-      pc.setStroke(false);
+      //pc.setStroke(false);
       
+      if (special == 0) 
+   {
+      pc.setStroke(false);
+   }
       if (special == 1) 
    {
      pc.setStroke(color(0, 0, 0));
