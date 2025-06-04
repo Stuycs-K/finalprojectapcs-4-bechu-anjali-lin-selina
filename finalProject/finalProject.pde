@@ -151,21 +151,48 @@ void keyPressed(){
  void drawScores() {
    textSize(40);
     fill(0);
-    text("Moves Left: ", 950, 100);
+    text("Moves Left: ", 950, 50);
     fill(255);
-    rect(1000,150,90,75);
+    rect(1000,80,90,75);
     fill(0);
-    text(scores.getMoves() + "", 1025,200);
-    text("Current Score: ", 925, 400);
+    text(scores.getMoves() + "", 1025,130);
+    text("Current Score: ", 925, 270);
     fill(255);
-    rect(985,450,115,75);
+    rect(985,300,115,75);
     fill(0);
-    text(scores.getScore() + "", 1000,500);
-    text("Goal Score: ", 950, 700);
+    text(scores.getScore() + "", 1000,350);
+    text("Goal Score: ", 950, 500);
     fill(255);
-    rect(985,750,115,75);
+    rect(985,530,115,75);
     fill(0);
-    text(scores.getGoal() + "", 1000,800);
+    text(scores.getGoal() + "", 1000,580);
+    
+    textSize(20);
+    fill(0);
+    text("Key:", 930, 670);
+    fill(255);
+    rect(910, 680, 280, 200);
+    
+    textSize(15);
+    fill(0);
+    text("Black Outline = UP STRIPED Candy", 930, (690 + 20));
+    text("White Outline = DOWN STRIPED Candy", 930, (720 + 20));
+    text("Lighter Shade of Color Outline", 930, (750 + 20));
+    text("= WRAPPED Candy", 930, (770 + 20));
+    text("Darker Shade of Color Outline", 930, (800 + 20));
+    text("= BOMB Candy", 930, (820 + 20));
+    text("No Outline = REGULAR Candy", 930, (850 + 20));
+    
+    text("-", 920, 710);
+    text("-", 920, 740);
+    text("-", 920, 770);
+    text("-", 920, 820);
+    text("-", 920, 870);
+    
+  // 2 is striped (across)   white
+  // 3 is wrapped    lighter shade of the color
+  // 4 is bomb   color but a darker shade 
+    
  }
  
  
