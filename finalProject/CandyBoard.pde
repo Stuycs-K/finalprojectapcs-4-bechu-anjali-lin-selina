@@ -51,30 +51,35 @@ class CandyBoard{
   }
   
   int remove(int x, int y){
+    if(board[y][x] == null){
+    return 0;
+    }
     int spec = board[y][x].getSpecial();
     String colr = board[y][x].getColor();
     int total = 0;
     if(spec<4 && swappable(x,y,x,y)){
       int left = -1;
       int up = -1;
-      while(left+x > -1 && board[y][x+left].getColor().equals(colr)){
+      int right = 1;
+      int down = 1;
+      while(left+x > -1 && board[y][x+left] != null && board[y][x+left].getColor().equals(colr)){
         board[y][x+left]=null;
         left--;
         total++;
       }
-      int right = 1;
-      while(right+x<board[0].length && board[y][x+right].getColor().equals(colr)){
+
+      while(right+x<board[0].length && board[y][x+right] != null && board[y][x+right].getColor().equals(colr)){
         board[y][x+right]=null;
         right++;
         total++;
       }
-      while(up+y > -1 && board[y+up][x].getColor().equals(colr)){
+      while(up+y > -1 && board[y+up][x] != null && board[y+up][x].getColor().equals(colr)){
         board[y+up][x]=null;
         up--;
         total++;
       }
-      int down = 1;
-      while(down+y<board.length && board[y+down][x].getColor().equals(colr)){
+
+      while(down+y<board.length && board[y+down][x] != null&& board[y+down][x].getColor().equals(colr)){
         board[y+down][x]=null;
         down++;
         total++;
@@ -126,7 +131,7 @@ class CandyBoard{
         }
       }
       
-      return total +replace();
+      return total+replace();
     }
     if(spec == 4){
       for(int i = 0; i < board.length; i++){
@@ -138,9 +143,9 @@ class CandyBoard{
         }
       }
       
-      return total + replace();
+      return total+replace();
     }
-    return total + replace();
+    return total+replace();
   }
   
   int replace(){
@@ -218,10 +223,10 @@ class CandyBoard{
     }
     
     boolean swappable2 = false;
-    if(x-1>-1 && x+1<board.length  && board[y][x-1].getColor().equals(thisColor) && board[y][x+1].getColor().equals(thisColor)){
+    if(x-1>-1 && x+1<board.length && board[y][x-1] != null && board[y][x+1] != null  && board[y][x-1].getColor().equals(thisColor) && board[y][x+1].getColor().equals(thisColor)){
       swappable2 = true;
     }
-    if(y-1>-1 && y+1<board.length  && board[y-1][x].getColor().equals(thisColor) && board[y+1][x].getColor().equals(thisColor)){
+    if(y-1>-1 && y+1<board.length && board[y-1][x] != null && board[y+1][x] != null    && board[y-1][x].getColor().equals(thisColor) && board[y+1][x].getColor().equals(thisColor)){
       swappable2 = true;
     }
     
@@ -257,7 +262,9 @@ void redrawBoard() {
      for(int i = 0; i < 9; i++){
       for(int j = 0; j < 9; j++){
         Candy temp = game.getBoard()[j][i];
-        temp.display(i,j);
+        if(temp != null){
+          temp.display(i,j);
+        }
       }
     }
     

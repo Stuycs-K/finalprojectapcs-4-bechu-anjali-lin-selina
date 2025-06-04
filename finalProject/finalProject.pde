@@ -8,7 +8,9 @@ void draw(){
    for(int i = 0; i < 9; i++){
       for(int j = 0; j < 9; j++){
         Candy temp = game.getBoard()[j][i];
-        temp.display(i,j);
+        if(temp != null){
+          temp.display(i,j);
+        }
       }
     }
     
@@ -132,7 +134,9 @@ void keyPressed(){
     for(int i = 0; i < 9; i++){
       for(int j = 0; j < 9; j++){
         Candy temp = game.getBoard()[j][i];
-        temp.display(i,j);
+        if(temp != null){
+          temp.display(i,j);
+        }
       }
     }
     for(int i= 0; i <=900;i+=100){
