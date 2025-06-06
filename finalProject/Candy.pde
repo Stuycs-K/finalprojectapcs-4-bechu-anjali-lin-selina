@@ -4,6 +4,8 @@ PShape gumdrop, top, bottom;
 PShape gumdropWhite, whiteGumTop, whiteGumBottom;
 PShape gumdropBlack, blackGumTop, blackGumBottom;
 PShape blackCircleLolli, blackLollipop, blackStick;
+
+PShape pcBlack, pcBlackLeft, pcCircleBlack, pcBlackRight;
 class Candy{
   private String candyColor;
   private int special;
@@ -195,7 +197,42 @@ lollipop = createShape(GROUP);
     lollipop.addChild(stick);
     
     if (candyColor.equals("purple")) {
-      //pc.setStroke(false);
+      if (special == 1) {
+        pcBlack = createShape(GROUP);
+        
+        pushMatrix();
+        translate(x * 100, y * 100);
+        pcBlackLeft = createShape();
+        pcBlackLeft.beginShape();
+        pcBlackLeft.fill(0);
+        pcBlackLeft.noStroke();
+        pcBlackLeft.vertex(48, 50);
+        pcBlackLeft.vertex(18, 32);
+        pcBlackLeft.vertex(18, 68);
+        pcBlackLeft.endShape(CLOSE);
+
+        pcCircleBlack = createShape(ELLIPSE, 50, 50, 24, 24);
+        pcCircleBlack.setFill(color(0));
+        pcCircleBlack.setStroke(false);
+
+        pcBlackRight = createShape();
+        pcBlackRight.beginShape();
+        pcBlackRight.fill(0);
+        pcBlackRight.noStroke();
+        pcBlackRight.vertex(42, 50);
+        pcBlackRight.vertex(72, 32);
+        pcBlackRight.vertex(72, 68);
+        pcBlackRight.endShape(CLOSE);
+
+        pcBlack.addChild(pcBlackLeft);
+        pcBlack.addChild(pcCircleBlack);
+        pcBlack.addChild(pcBlackRight);
+        popMatrix();
+
+        shape(pcBlack, x * 100, y * 100);
+      }
+
+      pc.setStroke(false);
       
       if (special == 0) 
    {
