@@ -317,7 +317,7 @@ lollipop = createShape(GROUP);
          PShape gumdropLight = createShape(GROUP);
 
         PShape lightGumTop = createShape(ELLIPSE, 50, 49, 36, 24);
-        lightGumTop.setFill(color(255));
+        lightGumTop.setFill(color(255, 204, 204));
         lightGumTop.setStroke(false);
         gumdropLight.addChild(lightGumTop);
 
@@ -336,14 +336,35 @@ lollipop = createShape(GROUP);
         popMatrix();
       }
       
+      if (special == 4) {
+        pushMatrix();
+        translate(x * 100, y * 100);
+        
+         PShape gumdropDark = createShape(GROUP);
+
+        PShape darkGumTop = createShape(ELLIPSE, 50, 49, 36, 24);
+        darkGumTop.setFill(color(255, 0, 0));
+        darkGumTop.setStroke(false);
+        gumdropDark.addChild(darkGumTop);
+
+        PShape darkGumBottom = createShape();
+        darkGumBottom.beginShape();
+        darkGumBottom.fill(255, 0, 0);
+        darkGumBottom.noStroke();
+        darkGumBottom.vertex(33, 50);
+        darkGumBottom.vertex(67, 50);
+        darkGumBottom.vertex(72, 85);
+        darkGumBottom.vertex(28, 85);
+        darkGumBottom.endShape(CLOSE);
+        gumdropDark.addChild(darkGumBottom);
+
+        shape(gumdropDark, 0, 0);
+        popMatrix();
+      }
+      
 
       gumdrop.setStroke(false);
-  
-   if (special == 4) 
-   {
-     gumdrop.setStroke(color(48, 25, 52));
-     gumdrop.strokeWeight(3);
-   }
+ 
          shape(gumdrop, x*100, y*100);
     }
     
