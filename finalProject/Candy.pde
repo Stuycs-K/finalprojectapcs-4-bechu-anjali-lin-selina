@@ -310,16 +310,35 @@ lollipop = createShape(GROUP);
         popMatrix();
       }
       
+      if (special == 3) {
+        pushMatrix();
+        translate(x * 100, y * 100);
+        
+         PShape gumdropLight = createShape(GROUP);
+
+        PShape lightGumTop = createShape(ELLIPSE, 50, 49, 36, 24);
+        lightGumTop.setFill(color(255));
+        lightGumTop.setStroke(false);
+        gumdropLight.addChild(lightGumTop);
+
+        PShape lightGumBottom = createShape();
+        lightGumBottom.beginShape();
+        lightGumBottom.fill(255, 204, 204);
+        lightGumBottom.noStroke();
+        lightGumBottom.vertex(33, 50);
+        lightGumBottom.vertex(67, 50);
+        lightGumBottom.vertex(72, 85);
+        lightGumBottom.vertex(28, 85);
+        lightGumBottom.endShape(CLOSE);
+        gumdropLight.addChild(lightGumBottom);
+
+        shape(gumdropLight, 0, 0);
+        popMatrix();
+      }
+      
 
       gumdrop.setStroke(false);
   
-   
-   if (special == 3) 
-   {
-     gumdrop.setStroke(color(203, 195, 227));
-     gumdrop.strokeWeight(3);
-   }
-   
    if (special == 4) 
    {
      gumdrop.setStroke(color(48, 25, 52));
