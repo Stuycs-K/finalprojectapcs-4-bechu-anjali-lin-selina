@@ -47,3 +47,6 @@ One class period, made replace move down candies, updated win condition and win/
 ### 2025-06-04-25 - Trying to fix removing errors
 Half hour at home, testing game and trying to fix errors with remove only removing left->right of matches.
 One class period, trying to get outlines on custom shapes for special candies.
+
+### 2025-06-06-25 - Testing
+Half hour at home, play testing, trying to fix bugs.

@@ -175,8 +175,8 @@ void keyPressed(){
     
     textSize(15);
     fill(0);
-    text("Black Outline = UP STRIPED Candy", 930, (690 + 20));
-    text("White Outline = DOWN STRIPED Candy", 930, (720 + 20));
+    text("Black Outline = Up-Down Striped Candy", 930, (690 + 20));
+    text("White Outline = Left-Right Striped Candy", 930, (720 + 20));
     text("Lighter Shade of Color Outline", 930, (750 + 20));
     text("= WRAPPED Candy", 930, (770 + 20));
     text("Darker Shade of Color Outline", 930, (800 + 20));

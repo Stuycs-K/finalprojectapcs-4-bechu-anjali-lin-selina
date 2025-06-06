@@ -67,13 +67,13 @@ class CandyBoard{
     String colr = board[y][x].getColor();
     int total = 0;
     if(spec<4 && swappable(x,y,x,y)){
-      int left = -1;
-      int up = -1;
+      int left = 1;
+      int up = 1;
       int right = 1;
       int down = 1;
-      while(up+y > -1 && board[y+up][x] != null && board[y+up][x].getColor().equals(colr)){
-        board[y+up][x]=null;
-        up--;
+      while(y-up > -1 && board[y-up][x] != null && board[y-up][x].getColor().equals(colr)){
+        board[y-up][x]=null;
+        up++;
         total++;
       }
 
@@ -82,9 +82,9 @@ class CandyBoard{
         down++;
         total++;
       }
-      while(left+x > -1 && board[y][x+left] != null && board[y][x+left].getColor().equals(colr)){
-        board[y][x+left]=null;
-        left--;
+      while(x-left > -1 && board[y][x-left] != null && board[y][x-left].getColor().equals(colr)){
+        board[y][x-left]=null;
+        left++;
         total++;
       }
 
