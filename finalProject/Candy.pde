@@ -233,27 +233,116 @@ lollipop = createShape(GROUP);
 
         shape(pcBlack, x * 100, y * 100);
       }
+      
+      if (special == 2) {
+        PShape pcWhite = createShape(GROUP);
+        
+        pushMatrix();
+        translate(x * 100, y * 100);
+        PShape pcWhiteLeft = createShape();
+        pcWhiteLeft.beginShape();
+        pcWhiteLeft.fill(255);
+        pcWhiteLeft.noStroke();
+        pcWhiteLeft.vertex(48, 50);
+        pcWhiteLeft.vertex(18, 32);
+        pcWhiteLeft.vertex(18, 68);
+        pcWhiteLeft.endShape(CLOSE);
+
+        PShape pcCircleWhite = createShape(ELLIPSE, 50, 50, 24, 24);
+        pcCircleWhite.setFill(color(255));
+        pcCircleWhite.setStroke(false);
+
+        PShape pcWhiteRight = createShape();
+        pcWhiteRight.beginShape();
+        pcWhiteRight.fill(255);
+        pcWhiteRight.noStroke();
+        pcWhiteRight.vertex(42, 50);
+        pcWhiteRight.vertex(72, 32);
+        pcWhiteRight.vertex(72, 68);
+        pcWhiteRight.endShape(CLOSE);
+
+        pcWhite.addChild(pcWhiteLeft);
+        pcWhite.addChild(pcCircleWhite);
+        pcWhite.addChild(pcWhiteRight);
+        popMatrix();
+
+        shape(pcWhite, x * 100, y * 100);
+      }
+      
+      if (special == 3) {
+        PShape pcLight = createShape(GROUP);
+        
+        pushMatrix();
+        translate(x * 100, y * 100);
+        PShape pcLightLeft = createShape();
+        pcLightLeft.beginShape();
+        pcLightLeft.fill(203, 195, 227);
+        pcLightLeft.noStroke();
+        pcLightLeft.vertex(48, 50);
+        pcLightLeft.vertex(18, 32);
+        pcLightLeft.vertex(18, 68);
+        pcLightLeft.endShape(CLOSE);
+
+        PShape pcCircleLight = createShape(ELLIPSE, 50, 50, 24, 24);
+        pcCircleLight.setFill(color(203, 195, 227));
+        pcCircleLight.setStroke(false);
+
+        PShape pcLightRight = createShape();
+        pcLightRight.beginShape();
+        pcLightRight.fill(203, 195, 227);
+        pcLightRight.noStroke();
+        pcLightRight.vertex(42, 50);
+        pcLightRight.vertex(72, 32);
+        pcLightRight.vertex(72, 68);
+        pcLightRight.endShape(CLOSE);
+
+        pcLight.addChild(pcLightLeft);
+        pcLight.addChild(pcCircleLight);
+        pcLight.addChild(pcLightRight);
+        popMatrix();
+
+        shape(pcLight, x * 100, y * 100);
+      }
+      
+      if (special == 4) {
+        PShape pcDark = createShape(GROUP);
+        
+        pushMatrix();
+        translate(x * 100, y * 100);
+        PShape pcDarkLeft = createShape();
+        pcDarkLeft.beginShape();
+        pcDarkLeft.fill(48, 25, 52);
+        pcDarkLeft.noStroke();
+        pcDarkLeft.vertex(48, 50);
+        pcDarkLeft.vertex(18, 32);
+        pcDarkLeft.vertex(18, 68);
+        pcDarkLeft.endShape(CLOSE);
+
+        PShape pcCircleDark = createShape(ELLIPSE, 50, 50, 24, 24);
+        pcCircleDark.setFill(color(48, 25, 52));
+        pcCircleDark.setStroke(false);
+
+        PShape pcDarkRight = createShape();
+        pcDarkRight.beginShape();
+        pcDarkRight.fill(48, 25, 52);
+        pcDarkRight.noStroke();
+        pcDarkRight.vertex(42, 50);
+        pcDarkRight.vertex(72, 32);
+        pcDarkRight.vertex(72, 68);
+        pcDarkRight.endShape(CLOSE);
+
+        pcDark.addChild(pcDarkLeft);
+        pcDark.addChild(pcCircleDark);
+        pcDark.addChild(pcDarkRight);
+        popMatrix();
+
+        shape(pcDark, x * 100, y * 100);
+      }
 
       pc.setStroke(false);
-      
+
+  
    
-   if (special == 2) 
-   {
-     pc.setStroke(color(255, 255, 255));
-     pc.strokeWeight(3);
-   }
-   
-   if (special == 3) 
-   {
-     pc.setStroke(color(203, 195, 227));
-     pc.strokeWeight(3);
-   }
-   
-   if (special == 4) 
-   {
-     pc.setStroke(color(48, 25, 52));
-     pc.strokeWeight(3);
-   }
       shape(pc, x*100, y*100);
     }
     
@@ -399,7 +488,7 @@ lollipop = createShape(GROUP);
         whiteLollipop.addChild(whiteCircleLolli);
 
         whiteStick = createShape(RECT, 46, 55, 8, 35, 10);
-        whiteStick.setFill(color(0));
+        whiteStick.setFill(color(255));
         whiteStick.setStroke(false);
         whiteLollipop.addChild(whiteStick);
     
@@ -444,13 +533,6 @@ lollipop = createShape(GROUP);
         popMatrix();
       }
        lollipop.setStroke(false);
-
-   
-   if (special == 4) 
-   {
-     lollipop.setStroke(color(48, 25, 52));
-     lollipop.strokeWeight(3);
-   }
      
       shape(lollipop, x*100, y*100);
     }
