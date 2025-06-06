@@ -1,7 +1,7 @@
 PShape purpleCandy, purpleCandy2, circle, pc;
+PShape pclOutline, pcrOutline, cOutline, pco;
 PShape lollipop, stick, circle2;
 PShape gumdrop, top, bottom;
-PShape gumdropWhite, whiteGumTop, whiteGumBottom;
 
 class Candy{
   private String candyColor;
@@ -160,8 +160,7 @@ if (special == 1)
     pc.addChild(purpleCandy);
     pc.addChild(purpleCandy2);
     pc.addChild(circle);
-
-    
+   
     
     gumdrop = createShape(GROUP);
     
@@ -202,8 +201,11 @@ lollipop = createShape(GROUP);
    }
       if (special == 1) 
    {
-     pc.setStroke(color(0, 0, 0));
-     pc.strokeWeight(3);
+     //pc.setStroke(color(0, 0, 0));
+     //pc.strokeWeight(3);
+     pc.fill(204, 102, 0);
+     pc.scale(0.5);
+     
    }
    
    if (special == 2) 
@@ -227,33 +229,7 @@ lollipop = createShape(GROUP);
     }
     
  
-    if (candyColor.equals("red")) { 
-      if (special == 2) {
-        pushMatrix();
-        translate(x * 100, y * 100);
-        
-        gumdropWhite = createShape(GROUP);
-
-        whiteGumTop = createShape(ELLIPSE, 50, 49, 36, 24);
-        whiteGumTop.setFill(color(255));
-        whiteGumTop.setStroke(false);
-        gumdropWhite.addChild(whiteGumTop);
-
-        whiteGumBottom = createShape();
-        whiteGumBottom.beginShape();
-        whiteGumBottom.fill(255);
-        whiteGumBottom.noStroke();
-        whiteGumBottom.vertex(33, 50);
-        whiteGumBottom.vertex(67, 50);
-        whiteGumBottom.vertex(72, 85);
-        whiteGumBottom.vertex(28, 85);
-        whiteGumBottom.endShape(CLOSE);
-        gumdropWhite.addChild(whiteGumBottom);
-
-        shape(gumdropWhite, 0, 0);
-        popMatrix();
-      }
-
+    if (candyColor.equals("red")) {
       gumdrop.setStroke(false);
       if (special == 1) 
    {
@@ -286,14 +262,19 @@ gumdrop.strokeWeight(3);
        lollipop.setStroke(false);
       if (special == 1) 
    {
-     lollipop.setStroke(color(0, 0, 0));
-     lollipop.strokeWeight(3);
+     //lollipop.setStroke(color(0, 0, 0));
+     //lollipop.strokeWeight(3);
+     lollipop.fill(204, 102, 0);
+     lollipop.scale(0.5);
    }
    
    if (special == 2) 
    {
-     lollipop.setStroke(color(255, 255, 255));
-     lollipop.strokeWeight(3);
+     //lollipop.setStroke(color(255, 255, 255));
+     //lollipop.strokeWeight(3);
+     lollipop.fill(204, 102, 0);
+     lollipop.scale(0.5);
+     
    }
    
    if (special == 3) 
