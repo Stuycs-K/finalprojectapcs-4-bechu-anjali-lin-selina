@@ -236,15 +236,6 @@ lollipop = createShape(GROUP);
 
       pc.setStroke(false);
       
-      if (special == 0) 
-   {
-      pc.setStroke(false);
-   }
-      if (special == 1) 
-   {
-     pc.setStroke(color(0, 0, 0));
-     pc.strokeWeight(3);
-   }
    
    if (special == 2) 
    {
@@ -321,17 +312,7 @@ lollipop = createShape(GROUP);
       
 
       gumdrop.setStroke(false);
-      if (special == 1) 
-   {
-     gumdrop.setStroke(color(0, 0, 0));
-gumdrop.strokeWeight(3);
-   }
-   
-   if (special == 2) 
-   {
-     gumdrop.setStroke(color(255, 255, 255));
-     gumdrop.strokeWeight(3);
-   }
+  
    
    if (special == 3) 
    {
@@ -386,18 +367,7 @@ gumdrop.strokeWeight(3);
         popMatrix();
       }
        lollipop.setStroke(false);
-      if (special == 1) 
-   {
-     lollipop.setStroke(color(0, 0, 0));
-     lollipop.strokeWeight(3);
-   }
-   
-   if (special == 2) 
-   {
-     lollipop.setStroke(color(255, 255, 255));
-     lollipop.strokeWeight(3);
-   }
-   
+  
    if (special == 3) 
    {
      lollipop.setStroke(color(203, 195, 227));
