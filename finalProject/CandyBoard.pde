@@ -13,19 +13,29 @@ class CandyBoard{
     replace();
   }
   
- /* CandyBoard(int i){
-    board = {{new Candy("red", -1, 5), new Candy("red", -1, 5),new Candy("green", -1, 5),new Candy("green", -1, 5),new Candy("purple", -1, 5),new Candy("orange", -1, 5),new Candy("orange", -1, 5),new Candy("green", -1, 5),new Candy("orange", -1, 5)},
-             {new Candy("green", -1, 5), new Candy("green", -1, 5),new Candy("purple", -1, 5),new Candy("blue", -1, 5),new Candy("blue", -1, 5),new Candy("red", -1, 5),new Candy("green", -1, 5),new Candy("purple", -1, 5),new Candy("orange", -1, 5)}
-             {new Candy("red", -1, 5), new Candy("blue", -1, 5),new Candy("green", -1, 5),new Candy("green", -1, 5),new Candy("blue", -1, 5),new Candy("orange", -1, 5),new Candy("purple", -1, 5),new Candy("orange", -1, 5),new Candy("green", -1, 5)}
-             {new Candy("red", -1, 5), new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5)}
-             {new Candy("red", -1, 5), new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5)}
-             {new Candy("red", -1, 5), new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5)}
-             {new Candy("red", -1, 5), new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5)}
-             {new Candy("red", -1, 5), new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5)}
-             {new Candy("red", -1, 5), new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5)}
-             };
+  CandyBoard(int i){
+ 
+    Candy[] zero = {new Candy("red", -1, 5), new Candy("red", -1, 5),new Candy("green", -1, 5),new Candy("green", -1, 5),new Candy("purple", -1, 5),new Candy("orange", -1, 5),new Candy("orange", -1, 5),new Candy("green", -1, 5),new Candy("orange", -1, 5)};
+    Candy[] one = {new Candy("green", -1, 5), new Candy("green", -1, 5),new Candy("purple", -1, 5),new Candy("blue", -1, 5),new Candy("blue", -1, 5),new Candy("red", -1, 5),new Candy("green", -1, 5),new Candy("purple", -1, 5),new Candy("orange", -1, 5)};
+    Candy[] two = {new Candy("red", -1, 5), new Candy("blue", -1, 5),new Candy("green", -1, 5),new Candy("green", -1, 5),new Candy("blue", -1, 5),new Candy("orange", -1, 5),new Candy("purple", -1, 5),new Candy("orange", -1, 5),new Candy("green", -1, 5)};
+    Candy[] three = {new Candy("orange", -1, 5), new Candy("yellow", -1, 5),new Candy("blue", -1, 5),new Candy("yellow", -1, 5),new Candy("purple", -1, 5),new Candy("purple", -1, 5),new Candy("green", -1, 5),new Candy("red", -1, 5),new Candy("purple", -1, 5)};
+    Candy[] four = {new Candy("purple", -1, 5), new Candy("yellow", -1, 5),new Candy("green", -1, 5),new Candy("purple", -1, 5),new Candy("green", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("green", -1, 5),new Candy("red", -1, 5)};
+    Candy[] five = {new Candy("blue", -1, 5), new Candy("red", -1, 5),new Candy("blue", -1, 5),new Candy("green", -1, 5),new Candy("yellow", -1, 5),new Candy("green", -1, 5),new Candy("yellow", -1, 5),new Candy("yellow", -1, 5),new Candy("purple", -1, 5)};
+    Candy[] six = {new Candy("orange", -1, 5), new Candy("orange", -1, 5),new Candy("purple", -1, 5),new Candy("blue", -1, 5),new Candy("orange", -1, 5),new Candy("green", -1, 5),new Candy("green", -1, 5),new Candy("yellow", -1, 5),new Candy("blue", -1, 5)};
+    Candy[] seven = {new Candy("orange", -1, 5), new Candy("blue", -1, 5),new Candy("yellow", -1, 5),new Candy("orange", -1, 5),new Candy("green", -1, 5),new Candy("orange", -1, 5),new Candy("red", -1, 5),new Candy("purple", -1, 5),new Candy("orange", -1, 5)};
+    Candy[] eight = {new Candy("green", -1, 5), new Candy("purple", -1, 5),new Candy("green", -1, 5),new Candy("blue", -1, 5),new Candy("blue", -1, 5),new Candy("red", -1, 5),new Candy("yellow", -1, 5),new Candy("orange", -1, 5),new Candy("purple", -1, 5)};
+     board = new Candy[9][9];
+     board[0] = zero;
+     board[1] = one;
+     board[2]=two;
+     board[3]=three;
+     board[4]=four;
+     board[5]=five;
+     board[6]=six;
+     board[7]=seven;
+     board[8]=eight;
   }
-  */
+ 
   
   Candy[][] getBoard(){
     return board;

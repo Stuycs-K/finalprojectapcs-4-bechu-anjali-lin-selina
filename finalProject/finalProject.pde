@@ -86,7 +86,7 @@ void mouseClicked(){
 }
 
 void keyPressed(){
-  if(key == ' ' && selected1[0] != -1 && selected1[1] !=-1 && selected2[0] != -1 && selected2[1]!=-1){
+  if(keyPressed && key == ' ' && selected1[0] != -1 && selected1[1] !=-1 && selected2[0] != -1 && selected2[1]!=-1){
     //Candy temp = game.getBoard()[selected1[1]][selected1[0]];
     //Candy temp2 = game.getBoard()[selected2[1]][selected2[0]];
     //temp.display(selected2[0],selected2[1]);
@@ -120,6 +120,16 @@ void keyPressed(){
     selected2[0] = -1;
     selected2[1] = -1;
 
+  }
+  if(keyPressed && key == '1'){
+    fill(150);
+    rect(0,0,900,900);
+    stroke(0);
+    for(int i= 0; i <=900;i+=100){
+      line(0,i,900,i);
+      line(i,0,i,900);
+    }
+    game = new CandyBoard(1);
   }
 
 }
