@@ -4,8 +4,10 @@ PShape gumdrop, top, bottom;
 PShape gumdropWhite, whiteGumTop, whiteGumBottom;
 PShape gumdropBlack, blackGumTop, blackGumBottom;
 PShape blackCircleLolli, blackLollipop, blackStick;
+PShape whiteCircleLolli, whiteLollipop, whiteStick;
 
 PShape pcBlack, pcBlackLeft, pcCircleBlack, pcBlackRight;
+
 class Candy{
   private String candyColor;
   private int special;
@@ -363,6 +365,24 @@ gumdrop.strokeWeight(3);
         blackLollipop.addChild(blackStick);
     
         shape(blackLollipop, 0, 0);
+        popMatrix();
+      }
+      if (special == 2) {
+        pushMatrix();
+        translate(x * 100, y * 100);
+        whiteLollipop = createShape(GROUP);
+
+        whiteCircleLolli = createShape(ELLIPSE, 50, 50, 36, 36);
+        whiteCircleLolli.setFill(color(255));
+        whiteCircleLolli.setStroke(false);
+        whiteLollipop.addChild(blackCircleLolli);
+
+        whiteStick = createShape(RECT, 46, 55, 8, 35, 10);
+        whiteStick.setFill(color(0));
+        whiteStick.setStroke(false);
+        whiteLollipop.addChild(whiteStick);
+    
+        shape(whiteLollipop, 0, 0);
         popMatrix();
       }
        lollipop.setStroke(false);
