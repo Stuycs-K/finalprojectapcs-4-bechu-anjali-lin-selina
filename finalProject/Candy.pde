@@ -3,7 +3,7 @@ PShape lollipop, stick, circle2;
 PShape gumdrop, top, bottom;
 PShape gumdropWhite, whiteGumTop, whiteGumBottom;
 PShape gumdropBlack, blackGumTop, blackGumBottom;
-
+PShape blackCircleLolli, blackLollipop, blackStick;
 class Candy{
   private String candyColor;
   private int special;
@@ -310,6 +310,24 @@ gumdrop.strokeWeight(3);
     
 
     if (candyColor.equals("yellow")) {
+      if (special == 1) {
+        pushMatrix();
+        translate(x * 100, y * 100);
+        blackLollipop = createShape(GROUP);
+
+        blackCircleLolli = createShape(ELLIPSE, 50, 50, 36, 36);
+        blackCircleLolli.setFill(color(0));
+        blackCircleLolli.setStroke(false);
+        blackLollipop.addChild(blackCircleLolli);
+
+        blackStick = createShape(RECT, 46, 55, 8, 35, 10);
+        blackStick.setFill(color(0));
+        blackStick.setStroke(false);
+        blackLollipop.addChild(blackStick);
+    
+        shape(blackLollipop, 0, 0);
+        popMatrix();
+      }
        lollipop.setStroke(false);
       if (special == 1) 
    {
