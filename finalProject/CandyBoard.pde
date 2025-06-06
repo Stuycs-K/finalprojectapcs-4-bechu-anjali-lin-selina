@@ -15,7 +15,7 @@ class CandyBoard{
   
   CandyBoard(int i){
  
-    Candy[] zero = {new Candy("red", -1, 5), new Candy("red", -1, 5),new Candy("green", -1, 5),new Candy("green", -1, 5),new Candy("purple", -1, 5),new Candy("orange", -1, 5),new Candy("orange", -1, 5),new Candy("green", -1, 5),new Candy("orange", -1, 5)};
+    Candy[] zero = {new Candy("red", -1, 5), new Candy("red", -1, 5),new Candy("green", -1, 5),new Candy("green", -1, 5),new Candy("purple", -1, 5),new Candy("red", -1, 5),new Candy("orange", -1, 5),new Candy("green", -1, 5),new Candy("orange", -1, 5)};
     Candy[] one = {new Candy("green", -1, 5), new Candy("green", -1, 5),new Candy("purple", -1, 5),new Candy("blue", -1, 5),new Candy("blue", -1, 5),new Candy("red", -1, 5),new Candy("green", -1, 5),new Candy("purple", -1, 5),new Candy("orange", -1, 5)};
     Candy[] two = {new Candy("red", -1, 5), new Candy("blue", -1, 5),new Candy("green", -1, 5),new Candy("green", -1, 5),new Candy("blue", -1, 5),new Candy("orange", -1, 5),new Candy("purple", -1, 5),new Candy("orange", -1, 5),new Candy("green", -1, 5)};
     Candy[] three = {new Candy("orange", -1, 5), new Candy("yellow", -1, 5),new Candy("blue", -1, 5),new Candy("yellow", -1, 5),new Candy("purple", -1, 5),new Candy("purple", -1, 5),new Candy("green", -1, 5),new Candy("red", -1, 5),new Candy("purple", -1, 5)};
@@ -96,23 +96,62 @@ class CandyBoard{
       int right = 1;
       int down = 1;
       while(y-up > -1 && board[y-up][x] != null && board[y-up][x].getColor().equals(colr)){
+        int spec1 = board[y-up][x].getSpecial();
+        if(spec1==-1){
+        board[y-up][x]=null;
+      }
+      if(spec ==1){
+        for(int i = 0; i < board.length; i++){
+          board[i][x]=null;
+          total++;
+        }
+      }
+      if(spec == 2){
+      for(int i = 0; i < board.length; i++){
+          board[y][i]=null;
+          total++;
+        }
+      }
+      if(spec == 3){
+        if(left==-1){
+          left=0;
+        }
+        if(right == board.length){
+          right = 8;
+        }
+        if(up ==-1){
+          up = 0;
+        }
+        if(down == board.length){
+          down = 8;
+        }
+        for(int i = left; i < right; i++){
+          for(int j = up; j < down; j++){
+            board[j][i] = null;
+            total++;
+          }
+        }
+      }
         board[y-up][x]=null;
         up++;
         total++;
       }
 
       while(down+y<board.length && board[y+down][x] != null&& board[y+down][x].getColor().equals(colr)){
+        int spec1 = board[y+down][x].getSpecial();
         board[y+down][x]=null;
         down++;
         total++;
       }
       while(x-left > -1 && board[y][x-left] != null && board[y][x-left].getColor().equals(colr)){
+        int spec1 = board[y][x-left].getSpecial();
         board[y][x-left]=null;
         left++;
         total++;
       }
 
       while(right+x<board[0].length && board[y][x+right] != null && board[y][x+right].getColor().equals(colr)){
+        int spec1 = board[y][x+right].getSpecial();
         board[y][x+right]=null;
         right++;
         total++;
