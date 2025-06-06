@@ -396,7 +396,7 @@ lollipop = createShape(GROUP);
         whiteCircleLolli = createShape(ELLIPSE, 50, 50, 36, 36);
         whiteCircleLolli.setFill(color(255));
         whiteCircleLolli.setStroke(false);
-        whiteLollipop.addChild(blackCircleLolli);
+        whiteLollipop.addChild(whiteCircleLolli);
 
         whiteStick = createShape(RECT, 46, 55, 8, 35, 10);
         whiteStick.setFill(color(0));
@@ -406,13 +406,45 @@ lollipop = createShape(GROUP);
         shape(whiteLollipop, 0, 0);
         popMatrix();
       }
+      if (special == 3) {
+        pushMatrix();
+        translate(x * 100, y * 100);
+        PShape lightLollipop = createShape(GROUP);
+
+        PShape lightCircleLolli = createShape(ELLIPSE, 50, 50, 36, 36);
+        lightCircleLolli.setFill(color(255, 255, 237));
+        lightCircleLolli.setStroke(false);
+        lightLollipop.addChild(lightCircleLolli);
+
+        PShape lightStick = createShape(RECT, 46, 55, 8, 35, 10);
+        lightStick.setFill(color(255, 255, 237));
+        lightStick.setStroke(false);
+        lightLollipop.addChild(lightStick);
+    
+        shape(lightLollipop, 0, 0);
+        popMatrix();
+      }
+      
+      if (special == 4) {
+        pushMatrix();
+        translate(x * 100, y * 100);
+        PShape darkLollipop = createShape(GROUP);
+
+        PShape darkCircleLolli = createShape(ELLIPSE, 50, 50, 36, 36);
+        darkCircleLolli.setFill(color(139, 128, 0));
+        darkCircleLolli.setStroke(false);
+        darkLollipop.addChild(darkCircleLolli);
+
+        PShape darkStick = createShape(RECT, 46, 55, 8, 35, 10);
+        darkStick.setFill(color(139, 128, 0));
+        darkStick.setStroke(false);
+        darkLollipop.addChild(darkStick);
+    
+        shape(darkLollipop, 0, 0);
+        popMatrix();
+      }
        lollipop.setStroke(false);
-  
-   if (special == 3) 
-   {
-     lollipop.setStroke(color(203, 195, 227));
-     lollipop.strokeWeight(3);
-   }
+
    
    if (special == 4) 
    {
