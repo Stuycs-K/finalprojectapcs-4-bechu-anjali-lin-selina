@@ -4,8 +4,10 @@ PShape gumdrop, top, bottom;
 PShape gumdropWhite, whiteGumTop, whiteGumBottom;
 PShape gumdropBlack, blackGumTop, blackGumBottom;
 PShape blackCircleLolli, blackLollipop, blackStick;
+PShape whiteCircleLolli, whiteLollipop, whiteStick;
 
 PShape pcBlack, pcBlackLeft, pcCircleBlack, pcBlackRight;
+
 class Candy{
   private String candyColor;
   private int special;
@@ -234,15 +236,6 @@ lollipop = createShape(GROUP);
 
       pc.setStroke(false);
       
-      if (special == 0) 
-   {
-      pc.setStroke(false);
-   }
-      if (special == 1) 
-   {
-     pc.setStroke(color(0, 0, 0));
-     pc.strokeWeight(3);
-   }
    
    if (special == 2) 
    {
@@ -317,31 +310,61 @@ lollipop = createShape(GROUP);
         popMatrix();
       }
       
+      if (special == 3) {
+        pushMatrix();
+        translate(x * 100, y * 100);
+        
+         PShape gumdropLight = createShape(GROUP);
+
+        PShape lightGumTop = createShape(ELLIPSE, 50, 49, 36, 24);
+        lightGumTop.setFill(color(255, 204, 204));
+        lightGumTop.setStroke(false);
+        gumdropLight.addChild(lightGumTop);
+
+        PShape lightGumBottom = createShape();
+        lightGumBottom.beginShape();
+        lightGumBottom.fill(255, 204, 204);
+        lightGumBottom.noStroke();
+        lightGumBottom.vertex(33, 50);
+        lightGumBottom.vertex(67, 50);
+        lightGumBottom.vertex(72, 85);
+        lightGumBottom.vertex(28, 85);
+        lightGumBottom.endShape(CLOSE);
+        gumdropLight.addChild(lightGumBottom);
+
+        shape(gumdropLight, 0, 0);
+        popMatrix();
+      }
+      
+      if (special == 4) {
+        pushMatrix();
+        translate(x * 100, y * 100);
+        
+         PShape gumdropDark = createShape(GROUP);
+
+        PShape darkGumTop = createShape(ELLIPSE, 50, 49, 36, 24);
+        darkGumTop.setFill(color(255, 0, 0));
+        darkGumTop.setStroke(false);
+        gumdropDark.addChild(darkGumTop);
+
+        PShape darkGumBottom = createShape();
+        darkGumBottom.beginShape();
+        darkGumBottom.fill(255, 0, 0);
+        darkGumBottom.noStroke();
+        darkGumBottom.vertex(33, 50);
+        darkGumBottom.vertex(67, 50);
+        darkGumBottom.vertex(72, 85);
+        darkGumBottom.vertex(28, 85);
+        darkGumBottom.endShape(CLOSE);
+        gumdropDark.addChild(darkGumBottom);
+
+        shape(gumdropDark, 0, 0);
+        popMatrix();
+      }
+      
 
       gumdrop.setStroke(false);
-      if (special == 1) 
-   {
-     gumdrop.setStroke(color(0, 0, 0));
-gumdrop.strokeWeight(3);
-   }
-   
-   if (special == 2) 
-   {
-     gumdrop.setStroke(color(255, 255, 255));
-     gumdrop.strokeWeight(3);
-   }
-   
-   if (special == 3) 
-   {
-     gumdrop.setStroke(color(203, 195, 227));
-     gumdrop.strokeWeight(3);
-   }
-   
-   if (special == 4) 
-   {
-     gumdrop.setStroke(color(48, 25, 52));
-     gumdrop.strokeWeight(3);
-   }
+ 
          shape(gumdrop, x*100, y*100);
     }
     
@@ -365,19 +388,26 @@ gumdrop.strokeWeight(3);
         shape(blackLollipop, 0, 0);
         popMatrix();
       }
+      if (special == 2) {
+        pushMatrix();
+        translate(x * 100, y * 100);
+        whiteLollipop = createShape(GROUP);
+
+        whiteCircleLolli = createShape(ELLIPSE, 50, 50, 36, 36);
+        whiteCircleLolli.setFill(color(255));
+        whiteCircleLolli.setStroke(false);
+        whiteLollipop.addChild(blackCircleLolli);
+
+        whiteStick = createShape(RECT, 46, 55, 8, 35, 10);
+        whiteStick.setFill(color(0));
+        whiteStick.setStroke(false);
+        whiteLollipop.addChild(whiteStick);
+    
+        shape(whiteLollipop, 0, 0);
+        popMatrix();
+      }
        lollipop.setStroke(false);
-      if (special == 1) 
-   {
-     lollipop.setStroke(color(0, 0, 0));
-     lollipop.strokeWeight(3);
-   }
-   
-   if (special == 2) 
-   {
-     lollipop.setStroke(color(255, 255, 255));
-     lollipop.strokeWeight(3);
-   }
-   
+  
    if (special == 3) 
    {
      lollipop.setStroke(color(203, 195, 227));
