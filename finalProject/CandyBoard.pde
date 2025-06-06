@@ -13,6 +13,20 @@ class CandyBoard{
     replace();
   }
   
+ /* CandyBoard(int i){
+    board = {{new Candy("red", -1, 5), new Candy("red", -1, 5),new Candy("green", -1, 5),new Candy("green", -1, 5),new Candy("purple", -1, 5),new Candy("orange", -1, 5),new Candy("orange", -1, 5),new Candy("green", -1, 5),new Candy("orange", -1, 5)},
+             {new Candy("green", -1, 5), new Candy("green", -1, 5),new Candy("purple", -1, 5),new Candy("blue", -1, 5),new Candy("blue", -1, 5),new Candy("red", -1, 5),new Candy("green", -1, 5),new Candy("purple", -1, 5),new Candy("orange", -1, 5)}
+             {new Candy("red", -1, 5), new Candy("blue", -1, 5),new Candy("green", -1, 5),new Candy("green", -1, 5),new Candy("blue", -1, 5),new Candy("orange", -1, 5),new Candy("purple", -1, 5),new Candy("orange", -1, 5),new Candy("green", -1, 5)}
+             {new Candy("red", -1, 5), new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5)}
+             {new Candy("red", -1, 5), new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5)}
+             {new Candy("red", -1, 5), new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5)}
+             {new Candy("red", -1, 5), new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5)}
+             {new Candy("red", -1, 5), new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5)}
+             {new Candy("red", -1, 5), new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5),new Candy("red", -1, 5)}
+             };
+  }
+  */
+  
   Candy[][] getBoard(){
     return board;
   }
