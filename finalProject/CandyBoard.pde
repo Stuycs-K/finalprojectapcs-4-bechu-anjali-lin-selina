@@ -42,16 +42,26 @@ class CandyBoard{
   }
   
   
-  int swap(int x1, int y1, int x2, int y2){
-    if(swappable(x1,y1,x2,y2) || swappable(x2,y2,x1,y1)){
-      Candy temp = board[y1][x1];
-      board[y1][x1]=board[y2][x2];
-      board[y2][x2]=temp;
-      return remove(x1,y1) + remove(x2,y2) + replace();
-    }
-    return 0;
+ int swap(int x1, int y1, int x2, int y2){
+    if (Math.abs(x1 - x2) + Math.abs(y1 - y2) != 1){
+      return 0;
+     }
+     
+     Candy temp = board[y1][x1];
+     board[y1][x1] = board[y2][x2];
+     board[y2][x2] = temp;
+     
+     if (swappable(x1, y1, x1, y1) || swappable(x2, y2, x2, y2)) {
+       return remove(x1, y1) + remove(x2, y2) + replace();
+     }else{
+       temp = board[y1][x1];
+       board[y1][x1] = board[y2][x2];
+       board[y2][x2] = temp;
+       return 0;
   }
-  
+}
+ 
+
   int remove(int x, int y){
     if(board[y][x] == null){
     return 0;
