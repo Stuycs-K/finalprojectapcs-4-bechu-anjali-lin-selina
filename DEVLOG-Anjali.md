@@ -34,7 +34,7 @@ added the yellow lollipop after I forgot to save and commit the code + tried to 
 ### 2025-06-02
 Started to write the code to animate the swap + added special outlines to the candy to classify the type of special they are + tried to debug the board because we broke the code
 
-### 2025-06-04
+### 2025-06-03
 Tried to animate the candies but its difficult bc we would have to redraw the board with evry incremental move 
 
 ### 2025-06-04
