@@ -47,37 +47,6 @@ class CandyBoard{
       Candy temp = board[y1][x1];
       board[y1][x1]=board[y2][x2];
       board[y2][x2]=temp;
-      
-      float candyX1 = (x2 - x1) * 100; 
-      float candyY1 = (y2 - y1) * 100;
-      float candyX2 = (x1 - x2) * 100;
-      float candyY2 = (y1 - y2) * 100;
-      
-      float speed = 10;
-      
-      float moveX1 = x1 * 100;
-      float moveY1 = y1 * 100;
-      float moveX2 = x2 * 100;
-      float moveY2 = y2 * 100;
-      
-      while (abs(moveX1 - (x2 * 100)) > 1 || abs(moveY1 - (y2 * 100)) > 1 || abs(moveX2 - (x1 * 100)) > 1 || abs(moveY2 - (y1 * 100)) > 1) {
-      pushMatrix();
-      translate(moveX1, moveY1);
-      board[y2][x2].display(0, 0);
-      popMatrix();
-
-      pushMatrix();
-      translate(moveX2, moveY2);
-      board[y1][x1].display(0, 0);
-      popMatrix();
-
-      delay(30);
-
-      moveX1 += candyX1;
-      moveY1 += candyY1;
-      moveX2 += candyX2;
-      moveY2 += candyY2;
-      }
       return remove(x1,y1) + remove(x2,y2) + replace();
     }
     return 0;

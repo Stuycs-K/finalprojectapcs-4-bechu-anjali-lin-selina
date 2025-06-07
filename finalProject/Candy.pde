@@ -63,7 +63,7 @@ class Candy{
    
    if (special == 3) 
    {
-     stroke(255, 140, 0);
+     stroke(255, 150, 40);
      strokeWeight(3);
    }
    
@@ -100,7 +100,7 @@ if (special == 1)
    
    if (special == 4) 
    {
-     stroke(0, 255, 0);
+stroke(0, 155, 0);
      strokeWeight(3);
    }
     fill(150, 220, 144);
@@ -124,16 +124,16 @@ if (special == 1)
    
    if (special == 3) 
    {
-     stroke(173, 216, 230);
+stroke(173, 216, 255);
      strokeWeight(3);
    }
    
    if (special == 4) 
    {
-     stroke(0, 0, 255);
+stroke(0, 0, 200);
      strokeWeight(3);
    }
-   fill(173, 216, 255);
+   fill(150, 200, 255);
     ellipse(x*100 +50, y*100 +50, 80, 80);
     }
    
@@ -189,12 +189,12 @@ if (special == 1)
     
 lollipop = createShape(GROUP);
      circle2 = createShape(ELLIPSE, 50, 50, 30, 30);
-    circle2.setFill(color(255, 255, 160));
+    circle2.setFill(color(255, 255, 185));
     circle2.setStroke(false);
     lollipop.addChild(circle2);
     
     stick = createShape(RECT, 48, 55, 5, 30, 10);
-    stick.setFill(color(255, 255, 160));
+    stick.setFill(color(255, 255, 185));
     stick.setStroke(false);
     lollipop.addChild(stick);
     
@@ -311,7 +311,7 @@ lollipop = createShape(GROUP);
         translate(x * 100, y * 100);
         PShape pcDarkLeft = createShape();
         pcDarkLeft.beginShape();
-        pcDarkLeft.fill(48, 25, 52);
+        pcDarkLeft.fill(130, 25, 130);
         pcDarkLeft.noStroke();
         pcDarkLeft.vertex(48, 50);
         pcDarkLeft.vertex(18, 32);
@@ -319,12 +319,12 @@ lollipop = createShape(GROUP);
         pcDarkLeft.endShape(CLOSE);
 
         PShape pcCircleDark = createShape(ELLIPSE, 50, 50, 24, 24);
-        pcCircleDark.setFill(color(48, 25, 52));
+        pcCircleDark.setFill(color(130, 25, 130));
         pcCircleDark.setStroke(false);
 
         PShape pcDarkRight = createShape();
         pcDarkRight.beginShape();
-        pcDarkRight.fill(48, 25, 52);
+        pcDarkRight.fill(130, 25, 130);
         pcDarkRight.noStroke();
         pcDarkRight.vertex(42, 50);
         pcDarkRight.vertex(72, 32);
@@ -406,13 +406,13 @@ lollipop = createShape(GROUP);
          PShape gumdropLight = createShape(GROUP);
 
         PShape lightGumTop = createShape(ELLIPSE, 50, 49, 36, 24);
-        lightGumTop.setFill(color(255, 204, 204));
+        lightGumTop.fill(255, 199, 206);
         lightGumTop.setStroke(false);
         gumdropLight.addChild(lightGumTop);
 
         PShape lightGumBottom = createShape();
         lightGumBottom.beginShape();
-        lightGumBottom.fill(255, 204, 204);
+        lightGumBottom.fill(255, 199, 206);
         lightGumBottom.noStroke();
         lightGumBottom.vertex(33, 50);
         lightGumBottom.vertex(67, 50);
@@ -432,13 +432,13 @@ lollipop = createShape(GROUP);
          PShape gumdropDark = createShape(GROUP);
 
         PShape darkGumTop = createShape(ELLIPSE, 50, 49, 36, 24);
-        darkGumTop.setFill(color(255, 0, 0));
+        darkGumTop.setFill(color(139, 0, 0));
         darkGumTop.setStroke(false);
         gumdropDark.addChild(darkGumTop);
 
         PShape darkGumBottom = createShape();
         darkGumBottom.beginShape();
-        darkGumBottom.fill(255, 0, 0);
+        darkGumBottom.fill(139, 0, 0);
         darkGumBottom.noStroke();
         darkGumBottom.vertex(33, 50);
         darkGumBottom.vertex(67, 50);
@@ -501,12 +501,12 @@ lollipop = createShape(GROUP);
         PShape lightLollipop = createShape(GROUP);
 
         PShape lightCircleLolli = createShape(ELLIPSE, 50, 50, 36, 36);
-        lightCircleLolli.setFill(color(255, 255, 237));
+        lightCircleLolli.fill(255, 245, 230);
         lightCircleLolli.setStroke(false);
         lightLollipop.addChild(lightCircleLolli);
 
         PShape lightStick = createShape(RECT, 46, 55, 8, 35, 10);
-        lightStick.setFill(color(255, 255, 237));
+        lightStick.fill(255, 245, 230);
         lightStick.setStroke(false);
         lightLollipop.addChild(lightStick);
     
@@ -520,12 +520,12 @@ lollipop = createShape(GROUP);
         PShape darkLollipop = createShape(GROUP);
 
         PShape darkCircleLolli = createShape(ELLIPSE, 50, 50, 36, 36);
-        darkCircleLolli.setFill(color(139, 128, 0));
+        darkCircleLolli.setFill(color(240, 240, 0));
         darkCircleLolli.setStroke(false);
         darkLollipop.addChild(darkCircleLolli);
 
         PShape darkStick = createShape(RECT, 46, 55, 8, 35, 10);
-        darkStick.setFill(color(139, 128, 0));
+        darkStick.setFill(color(240, 240, 0));
         darkStick.setStroke(false);
         darkLollipop.addChild(darkStick);
     
@@ -537,9 +537,19 @@ lollipop = createShape(GROUP);
       shape(lollipop, x*100, y*100);
     }
     
+   
     stroke(0);
     strokeWeight(1);
   }
   
-
+  
+  
+  ///white, black, dark lollipop
+// dark, black, white gumdrop
+//black pc, white pc, dark pc doesnt work?   
 }
+
+
+
+
+///l shape for the blue makes ark blue
