@@ -213,7 +213,7 @@ lollipop = createShape(GROUP);
         pcBlackLeft.vertex(18, 68);
         pcBlackLeft.endShape(CLOSE);
 
-        pcCircleBlack = createShape(ELLIPSE, 50, 50, 24, 24);
+        pcCircleBlack = createShape(ELLIPSE, 48, 50, 24, 24);
         pcCircleBlack.setFill(color(0));
         pcCircleBlack.setStroke(false);
 
@@ -221,9 +221,9 @@ lollipop = createShape(GROUP);
         pcBlackRight.beginShape();
         pcBlackRight.fill(0);
         pcBlackRight.noStroke();
-        pcBlackRight.vertex(42, 50);
-        pcBlackRight.vertex(72, 32);
-        pcBlackRight.vertex(72, 68);
+        pcBlackRight.vertex(48, 50);
+        pcBlackRight.vertex(78, 32);
+        pcBlackRight.vertex(78, 68);
         pcBlackRight.endShape(CLOSE);
 
         pcBlack.addChild(pcBlackLeft);
@@ -248,7 +248,7 @@ lollipop = createShape(GROUP);
         pcWhiteLeft.vertex(18, 68);
         pcWhiteLeft.endShape(CLOSE);
 
-        PShape pcCircleWhite = createShape(ELLIPSE, 50, 50, 24, 24);
+        PShape pcCircleWhite = createShape(ELLIPSE, 48, 50, 24, 24);
         pcCircleWhite.setFill(color(255));
         pcCircleWhite.setStroke(false);
 
@@ -256,9 +256,9 @@ lollipop = createShape(GROUP);
         pcWhiteRight.beginShape();
         pcWhiteRight.fill(255);
         pcWhiteRight.noStroke();
-        pcWhiteRight.vertex(42, 50);
-        pcWhiteRight.vertex(72, 32);
-        pcWhiteRight.vertex(72, 68);
+        pcWhiteRight.vertex(48, 50);
+        pcWhiteRight.vertex(78, 32);
+        pcWhiteRight.vertex(78, 68);
         pcWhiteRight.endShape(CLOSE);
 
         pcWhite.addChild(pcWhiteLeft);
@@ -283,7 +283,7 @@ lollipop = createShape(GROUP);
         pcLightLeft.vertex(18, 68);
         pcLightLeft.endShape(CLOSE);
 
-        PShape pcCircleLight = createShape(ELLIPSE, 50, 50, 24, 24);
+        PShape pcCircleLight = createShape(ELLIPSE, 48, 50, 24, 24);
         pcCircleLight.setFill(color(203, 195, 227));
         pcCircleLight.setStroke(false);
 
@@ -291,9 +291,9 @@ lollipop = createShape(GROUP);
         pcLightRight.beginShape();
         pcLightRight.fill(203, 195, 227);
         pcLightRight.noStroke();
-        pcLightRight.vertex(42, 50);
-        pcLightRight.vertex(72, 32);
-        pcLightRight.vertex(72, 68);
+        pcLightRight.vertex(48, 50);
+        pcLightRight.vertex(78, 32);
+        pcLightRight.vertex(78, 68);
         pcLightRight.endShape(CLOSE);
 
         pcLight.addChild(pcLightLeft);
@@ -318,7 +318,7 @@ lollipop = createShape(GROUP);
         pcDarkLeft.vertex(18, 68);
         pcDarkLeft.endShape(CLOSE);
 
-        PShape pcCircleDark = createShape(ELLIPSE, 50, 50, 24, 24);
+        PShape pcCircleDark = createShape(ELLIPSE, 48, 50, 24, 24);
         pcCircleDark.setFill(color(130, 25, 130));
         pcCircleDark.setStroke(false);
 
@@ -326,9 +326,9 @@ lollipop = createShape(GROUP);
         pcDarkRight.beginShape();
         pcDarkRight.fill(130, 25, 130);
         pcDarkRight.noStroke();
-        pcDarkRight.vertex(42, 50);
-        pcDarkRight.vertex(72, 32);
-        pcDarkRight.vertex(72, 68);
+        pcDarkRight.vertex(48, 50);
+        pcDarkRight.vertex(78, 32);
+        pcDarkRight.vertex(78, 68);
         pcDarkRight.endShape(CLOSE);
 
         pcDark.addChild(pcDarkLeft);
