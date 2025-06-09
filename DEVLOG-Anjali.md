@@ -48,3 +48,5 @@ Created the remaining candies (like the white and black and dark versions)
 
 ### 2025-06-07
 updated the colors of some of the candies + fixed our swap
+
+"I believe this document accurately reflects the contributions of my teammate." - Selina

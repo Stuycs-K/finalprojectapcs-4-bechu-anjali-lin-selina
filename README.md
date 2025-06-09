@@ -3,6 +3,13 @@
 # Demo Video
 https://drive.google.com/file/d/1MHCU8fUve2Pivl61EjxBzlmUPzJCwrg2/view?usp=sharing
 
+# Program Instructions
+Running program results in a randomized board.
+When using program, can press 1 to load a predetermined board.
+Click up to two squares to select them. Click a selected square to unselect it.
+With two selected squares shown on screen, press space to swap candies.
+
+
 # Project Description
 
 PERIOD 4
