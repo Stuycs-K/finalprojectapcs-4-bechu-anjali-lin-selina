@@ -43,9 +43,6 @@ class CandyBoard{
 
 
    int swap(int x1, int y1, int x2, int y2) {
-    if (Math.abs(x1 - x2) + Math.abs(y1 - y2) != 1){
-      return 0;
-     }
 
      Candy temp = board[y1][x1];
      board[y1][x1] = board[y2][x2];
